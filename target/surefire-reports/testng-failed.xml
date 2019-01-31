@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.bossc.qa.testcases.EmployeePageTest">
+        <methods>
+          <include name="VerifyEditColumn"/>
+          <include name="Edit_Service"/>
+          <include name="VerifyRunWorkFlow"/>
+          <include name="VerifyAddNotes"/>
+          <include name="setUp"/>
+          <include name="VerifyAssignTask"/>
+          <include name="VerifyAssignWorkFlow"/>
+          <include name="VerifyRunTask"/>
+          <include name="VerifyAddService"/>
+        </methods>
+      </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

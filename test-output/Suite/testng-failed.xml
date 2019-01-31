@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.bossc.qa.ExtentReportListner.ExtentReportListener"/>
+  </listeners>
+  <test name="BOSSC Web TestCases(failed)">
+    <classes>
+      <class name="com.bossc.qa.testcases.EmployeePageTest">
+        <methods>
+          <include name="Edit_Service"/>
+          <include name="VerifyEditDependent"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="VerifyAddService"/>
+        </methods>
+      </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
+      <class name="com.bossc.qa.testcases.SettingsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="VerifyNewObjectCalculationFields"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
+    </classes>
+  </test> <!-- BOSSC Web TestCases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

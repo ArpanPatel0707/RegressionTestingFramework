@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" >
+
+<listeners>
+<listener class-name ="com.bossc.qa.ExtentReportListner.ExtentReportListener"></listener>
+</listeners>
+<test name="BOSSC Web TestCases">
+<classes>
+<class name= "com.bossc.qa.testcases.LoginPageTest"></class>
+<!-- <class name= "com.bossc.qa.testcases.DashBoardTest"></class> -->
+<!-- <class name= "com.bossc.qa.testcases.EmployeePageTest"></class>
+<class name= "com.bossc.qa.testcases.SettingsPageTest"></class> -->
+
+</classes>
+</test>
+</suite>

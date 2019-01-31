@@ -1,0 +1,4 @@
+com\bossc\qa\testcases\LoginPageTest.class
+com\bossc\qa\testcases\SettingsPageTest.class
+com\bossc\qa\testcases\DashBoardTest.class
+com\bossc\qa\testcases\EmployeePageTest.class
