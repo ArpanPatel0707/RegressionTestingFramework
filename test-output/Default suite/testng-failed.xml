@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.bossc.qa.testcases.DashBoardTest">
+      <class name="com.bossc.qa.testcases.SettingsPageTest">
         <methods>
+          <include name="VerifyEmailService1"/>
+          <include name="VerifyNewObjectCalculationFields"/>
           <include name="setUp"/>
-          <include name="VerifyCreateReminderTest"/>
         </methods>
-      </class> <!-- com.bossc.qa.testcases.DashBoardTest -->
+      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

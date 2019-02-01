@@ -39,7 +39,7 @@ public class SettingsPageTest extends TestBase{
 		}
 		
 
-		/* @Test(priority=1)
+		 @Test(priority=1)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
 			settings.CreateNewStaticField();
@@ -90,10 +90,10 @@ public class SettingsPageTest extends TestBase{
 			
 			
 		}
-		*/
 		
 		
-		/*
+		
+		
 		//@Test(priority=5)
 		//public void VerifyNewReport() throws InterruptedException{
 		
@@ -110,7 +110,7 @@ public class SettingsPageTest extends TestBase{
 			
 		//}
 		
-*/
+
 		
 	/*@Test(priority=7)
 		public void VerifyEmailService1() throws InterruptedException{
@@ -130,20 +130,20 @@ public class SettingsPageTest extends TestBase{
 		
 	
 			
-		}*/
+		}
+		
+		*/
 		
 		
 		
 		
-		
-		
-	/*@Test(priority=9)
+	@Test(priority=9)
 		public void VerifyNewObjectCalculationFields() throws InterruptedException{
 		
 		 settings.Object_CalculationField();
 	
 			
-		}*/
+		}
 		
 	
        /* @AfterMethod

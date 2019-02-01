@@ -99,14 +99,14 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}
-			
+			/*
 			@Test(priority=4,dependsOnMethods={ "VerifyAssignWorkFlow" })
 			public void VerifyRunWorkFlow() throws InterruptedException {
 			
 				employees.Run_Approve_WorkFlow();
 				
 				
-			}
+			}*/
 
 		    @Test(priority=5)
 			public void VerifyAssignTask() throws InterruptedException {
@@ -116,14 +116,14 @@ import com.bossc.qa.util.TestUtil;
 				
 			}
 			
-			
+		/*	
 			@Test(priority=6,dependsOnMethods={ "VerifyAssignTask" })
 			public void VerifyRunTask() throws InterruptedException {
 			
 				employees.Run_Approve_Task();
 				
 				
-			}
+			}*/
 			
 			@Test(priority=7)
 			public void VerifyEditEmployee() throws InterruptedException {
@@ -172,11 +172,11 @@ import com.bossc.qa.util.TestUtil;
 			public void VerifyAddNotes() throws InterruptedException {
 			
 				String Add_Notes = employees.Add_Note();
-				assertEquals(Add_Notes," hi ");
+				assertEquals(Add_Notes,"hi");
 				
 			}
 			
-			@Test(priority=10)
+			@Test(priority=12)
 			public void VerifyEditColumn() throws InterruptedException {
 			
 				String Result_Employee_Edit = employees.Edit_Column();

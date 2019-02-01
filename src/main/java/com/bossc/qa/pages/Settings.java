@@ -348,7 +348,7 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-2']")
 	WebElement Objects_Fields_Type_Select;
 	
-	@FindBy(xpath="//mat-option[@id='mat-option-25']")
+	@FindBy(xpath="//span[text()=' CALCULATION ']")
 	WebElement Objects_Fields_Type_Option;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
