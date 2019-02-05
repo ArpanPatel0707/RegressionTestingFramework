@@ -116,10 +116,10 @@ public class Employees extends TestBase{
 
 	
 // Assign workflow
-	@FindBy(xpath="//i[@class='fas fa-cogs']")
+	@FindBy(xpath="//button[@title='Workflows']")
 	WebElement ButtonWorkFlow;
 	
-	@FindBy(xpath="//i[@class='fas fa-calendar-exclamation']")
+	@FindBy(xpath="//button[@title='Tasks']")
 	WebElement ButtonTask;
 	
 	@FindBy(xpath="//button[@title='Assign Workflow']")
@@ -318,7 +318,7 @@ public class Employees extends TestBase{
 	
 	
 	// Add note
-	@FindBy(xpath="//i[@class='fas fa-file-signature']")
+	@FindBy(xpath="//button[@title='Notes']")
 	WebElement Employee_Notes;
 	
 	@FindBy(xpath="//button[@title='Add New Note']")
