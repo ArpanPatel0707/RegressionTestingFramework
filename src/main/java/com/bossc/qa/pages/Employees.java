@@ -492,7 +492,7 @@ public void AssignWorkFlow() throws InterruptedException{
 	Thread.sleep(5000);
 	QuickSearchClick.click();
 	EmployeeSearchClick.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	ButtonWorkFlow.click();
 	ButtonAssignWorkFlow.click();
 	Thread.sleep(1000);
@@ -552,7 +552,7 @@ public void AssignTask() throws InterruptedException{
 	Thread.sleep(5000);
 	QuickSearchClick.click();
 	EmployeeSearchClick.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	ButtonTask.click();
 	Thread.sleep(2000);
 	ButtonAssignTask.click();
@@ -577,7 +577,7 @@ public void Run_Approve_Task() throws InterruptedException{
 	Thread.sleep(5000);
 	QuickSearchClick.click();
 	EmployeeSearchClick.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	ButtonTask.click();
 
 	RunTask_WorkFlow.click();
@@ -726,7 +726,7 @@ public String Add_Note() throws InterruptedException{
 	Thread.sleep(5000);
 	QuickSearchClick.click();
 	EmployeeSearchClick.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	Employee_Notes.click();
 	Employee_Add_Note.click();
 	Employee_Subject.sendKeys("hi");
