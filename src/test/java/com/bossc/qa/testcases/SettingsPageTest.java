@@ -38,23 +38,23 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-/*
+///*
 		 @Test(priority=1)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
 			settings.CreateNewStaticField();
 			
 			
-		}*/
-	/*
+		}//*/
+	///*
 		@Test(priority=2)
 		public void VerifyNewListField() throws InterruptedException{
 		
 			settings.CreateNewListField();
 			
 			
-		}*/
-		/*
+		}//*/
+		///*
 		@DataProvider(name="ConstantData")
 		String [][] getData() throws IOException
 		{
@@ -83,15 +83,15 @@ public class SettingsPageTest extends TestBase{
 			settings.CreateNewConstantField(ConstantName,ConstantDisplayName,Value);
 			
 			
-		}*/
-		/*
+		}//*/
+		///*
 		@Test(priority=4)
 		public void VerifyNewCalculationField() throws InterruptedException{
 			
 			settings.CreateNewCalculationField();
 			
 			
-		}*/
+		}//*/
 		
 		
 		// ar
