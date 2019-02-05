@@ -396,6 +396,7 @@ public void CreateNewStaticField() throws InterruptedException{
 		FieldDisplayName.sendKeys("StaticTest08");
 		Thread.sleep(4000);
 		FieldTypeSelect.click();
+		Thread.sleep(2000);
 		FieldTypeStatic.click();
 		FieldDataTypeSelect.click();
 		Thread.sleep(2000);
