@@ -29,7 +29,7 @@ public class DashBoardTest extends TestBase {
 	
 
 	
-
+/*
 	@Test(priority=1)
 	public void VerifyCreateReminderTest() throws InterruptedException {
 	
@@ -39,7 +39,7 @@ public class DashBoardTest extends TestBase {
 	}
 
 
-
+*/
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

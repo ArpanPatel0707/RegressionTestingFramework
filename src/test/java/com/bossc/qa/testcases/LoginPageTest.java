@@ -33,7 +33,7 @@ public class LoginPageTest extends TestBase{
 }
 		
 
-		
+	/*	
 
 		@Test(priority=1)
 		public void loginTest() throws IOException{
@@ -42,7 +42,7 @@ public class LoginPageTest extends TestBase{
 		}
 
 
-
+*/
 		@AfterMethod
 		public void tearDown(){
 		driver.quit();

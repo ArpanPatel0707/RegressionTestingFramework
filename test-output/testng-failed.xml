@@ -3,12 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.bossc.qa.testcases.SettingsPageTest">
+      <class name="com.bossc.qa.testcases.EmployeePageTest">
         <methods>
-          <include name="VerifyNewObjectCalculationFields"/>
+          <include name="tearDown"/>
+          <include name="VerifyAddNotes"/>
           <include name="setUp"/>
+          <include name="VerifyAssignTask"/>
+          <include name="VerifyRunTask"/>
+          <include name="VerifyAssignWorkFlow"/>
         </methods>
-      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
+      </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
