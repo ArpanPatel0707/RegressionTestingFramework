@@ -40,11 +40,11 @@ public class DashBoardTest extends TestBase {
 
 
 
-	/*@AfterMethod
+	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}
-*/
+
 	
 	
 	

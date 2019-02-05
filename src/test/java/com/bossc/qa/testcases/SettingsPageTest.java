@@ -38,21 +38,23 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-
+/*
 		 @Test(priority=1)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
 			settings.CreateNewStaticField();
 			
 			
-		}
+		}*/
+	/*
 		@Test(priority=2)
 		public void VerifyNewListField() throws InterruptedException{
 		
 			settings.CreateNewListField();
 			
 			
-		}
+		}*/
+		/*
 		@DataProvider(name="ConstantData")
 		String [][] getData() throws IOException
 		{
@@ -81,18 +83,18 @@ public class SettingsPageTest extends TestBase{
 			settings.CreateNewConstantField(ConstantName,ConstantDisplayName,Value);
 			
 			
-		}
-		
+		}*/
+		/*
 		@Test(priority=4)
 		public void VerifyNewCalculationField() throws InterruptedException{
 			
 			settings.CreateNewCalculationField();
 			
 			
-		}
+		}*/
 		
 		
-		
+		// ar
 		
 		//@Test(priority=5)
 		//public void VerifyNewReport() throws InterruptedException{
@@ -137,22 +139,24 @@ public class SettingsPageTest extends TestBase{
 		
 		
 		
-	@Test(priority=9)
+	///*
+	 @Test(priority=9)
+	 
 		public void VerifyNewObjectCalculationFields() throws InterruptedException{
 		
 		 settings.Object_CalculationField();
 	
 			
 		}
-		
+		//*/
 	
-       /* @AfterMethod
+    /*  @AfterMethod
 		public void tearDown(){
 			driver.quit();
 		}
-*/
 
-		
+
+		*/
 		
 
 	

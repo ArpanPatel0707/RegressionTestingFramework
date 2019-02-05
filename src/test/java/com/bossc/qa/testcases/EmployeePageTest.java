@@ -45,7 +45,7 @@ import com.bossc.qa.util.TestUtil;
 			
 			@DataProvider(name="LoginData")
 			String [][] getData() throws IOException
-			{
+			   {
 				String path=System.getProperty("user.dir")+"/src/main/java/com/bossc/qa/testdata/DataDriven.xlsx";
 				
 				int rownum=TestUtil.getRowCount(path, "Sheet1");
@@ -63,42 +63,47 @@ import com.bossc.qa.util.TestUtil;
 				}
 			return logindata;
 			}
-			
+			/*
 			
 			@Test(priority=1,dataProvider="LoginData")
-			public void VerifyNewEmployee(String FirstName, String LastName,String JobTitle, String ManagerName,String HiredDate,String AnnualPay) throws InterruptedException, IOException{
+			public void VerifyNewEmployee(String FirstName, String LastName,String JobTitle, String ManagerName,String HiredDate,String AnnualPay) throws InterruptedException, IOException
+			{
 			employees.AddNewEmployee(FirstName,LastName,JobTitle,ManagerName,HiredDate,AnnualPay);
 				
 			
 				
-			}
+			} 
+			
+			*/
 			
 			
-			
+			/*
 			@Test(priority=2)
 			public void VerifyNewDepdent() throws InterruptedException{
 		    employees.AddNewDependent();
 				
 
-			}
-
+			} */
+/*
 			@Test(priority=3)
 			public void VerifyNewBeneficiary() throws InterruptedException{
 		    employees.AddNewBeneficiary();
 				
 
-			}
+			} */
 			
 			
 			
-			
+	/*		
 			@Test(priority=3)
 			public void VerifyAssignWorkFlow() throws InterruptedException {
 			
 				employees.AssignWorkFlow();
 				
 				
-			}
+			} */
+			
+			
 			/*
 			@Test(priority=4,dependsOnMethods={ "VerifyAssignWorkFlow" })
 			public void VerifyRunWorkFlow() throws InterruptedException {
@@ -107,16 +112,16 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}*/
-
+			/*
 		    @Test(priority=5)
 			public void VerifyAssignTask() throws InterruptedException {
 			
 				employees.AssignTask();
 				
 				
-			}
+			} */
 			
-		/*	
+		    /*	
 			@Test(priority=6,dependsOnMethods={ "VerifyAssignTask" })
 			public void VerifyRunTask() throws InterruptedException {
 			
@@ -124,17 +129,17 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}*/
-			
+			/*	
 			@Test(priority=7)
 			public void VerifyEditEmployee() throws InterruptedException {
 			
 				String EditedEmployeeValue = employees.Employee_Edit();
-				assertEquals(EditedEmployeeValue,"KrishnaPrabhu");
+				assertEquals(EditedEmployeeValue,"LordPrabhu");
 				
 				
-			}
+			} */
 			
-			
+			/*
 			@Test(priority=8)
 			public void VerifyEditDependent() throws InterruptedException {
 			
@@ -142,14 +147,15 @@ import com.bossc.qa.util.TestUtil;
 				assertEquals(EditedValue,"Edited");
 				
 				
-			}
+			} */
+			/*
 			@Test(priority=9)
 			public void VerifyAddService() throws InterruptedException {
 			
 				employees.Add_Service();
 				
 				
-			}
+			} */
 			
 		//	@Test(priority=10)
 		//	public void VerifyGenerate_Document() throws InterruptedException {
@@ -158,31 +164,32 @@ import com.bossc.qa.util.TestUtil;
 		    //   Assert.assertTrue(flag);
 				
 			//}
-			
+			/*
 			@Test(priority=11,dependsOnMethods={ "VerifyAddService" })
 			public void Edit_Service() throws InterruptedException {
 			
 				boolean flag = employees.Edit_Service();
 		       Assert.assertTrue(flag);
 				
-			}
+			} */
 			
-			
+			/*
 			@Test(priority=10)
 			public void VerifyAddNotes() throws InterruptedException {
 			
 				String Add_Notes = employees.Add_Note();
 				assertEquals(Add_Notes,"hi");
 				
-			}
-			
+			} */
+			/*
 			@Test(priority=12)
 			public void VerifyEditColumn() throws InterruptedException {
 			
 				String Result_Employee_Edit = employees.Edit_Column();
 				assertEquals(Result_Employee_Edit,"January 1, 2019");
 				
-			}
+			} */
+			 
 
 			
 
@@ -196,12 +203,12 @@ import com.bossc.qa.util.TestUtil;
 			
 			
 			
-         /* @AfterMethod
+         @AfterMethod
 			public void tearDown(){
 				driver.quit();
 			}
 
-          */
+          
 
 }
 		

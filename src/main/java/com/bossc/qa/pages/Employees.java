@@ -111,7 +111,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@class='btn bossc-btn']")
 	WebElement DepSave;
 
-	@FindBy(xpath="//input[@id='mat-input-0']")
+	@FindBy(xpath="//img[@src='/assets/icons/camera.svg']")
 	WebElement DepSaveId;
 
 	
@@ -216,13 +216,13 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Edit Profile']")
 	WebElement EmployeeEdit;
 	
-	@FindBy(xpath="//input[@id='mat-input-2']")
+	@FindBy(xpath="//input[@id='mat-input-0']")
 	WebElement EmployeeEditEnter;
 	
 	@FindBy(xpath="//button[@title='Save Profile']")
 	WebElement EmployeeEditSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-20']")
+	@FindBy(xpath="//input[@id='mat-input-22']")
 	WebElement EmployeeEditedValue;
 	
 	@FindBy(xpath="(//div[text()=' Employee Profile '])[2]")
@@ -242,7 +242,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Save Profile']")
 	WebElement DependentEditSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-4']")
+	@FindBy(xpath="//input[@id='mat-input-5']")
 	WebElement DependentEditedValue;
 	
 	@FindBy(xpath="(//div[text()=' Personal Details '])[2]")
@@ -257,7 +257,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[text()=' ADD SERVICE ']")
 	WebElement Employee_Add_Service;
 	
-	@FindBy(xpath="(//label[@class='mat-checkbox-layout'])[2]")
+	@FindBy(xpath="//span[text()='Dental']")
 	WebElement Employee_Dental;
 	
 	@FindBy(xpath="//button[text()='Next']")
@@ -424,7 +424,7 @@ public class Employees extends TestBase{
 	
 	
 	
-public void AddNewDependent() throws InterruptedException{
+ public void AddNewDependent() throws InterruptedException{
 		
 	    QuickSearchEnter.sendKeys("Lord");
 	    Thread.sleep(5000);
@@ -434,7 +434,7 @@ public void AddNewDependent() throws InterruptedException{
 		Employee_Family.click();
 		Thread.sleep(4000);
 		AddNewPerson.click();
-	Thread.sleep(2000);
+	    Thread.sleep(2000);
 		Dependent.click();
 	
 		DepFirstName.sendKeys("CristianoDep");
@@ -447,12 +447,14 @@ public void AddNewDependent() throws InterruptedException{
 		DepLanguageSelect.click();
 		DepLanguageOption.click();
 		DepSave.click();
-		
+		Thread.sleep(2000);
+		DepSaveId.click();
 		
 		
 			
 	}
-public void AddNewBeneficiary() throws InterruptedException{
+
+  public void AddNewBeneficiary() throws InterruptedException{
 	
     QuickSearchEnter.sendKeys("Lord");
     Thread.sleep(5000);
@@ -510,7 +512,9 @@ public void AssignWorkFlow() throws InterruptedException{
 
 		
 }
-public void Run_Approve_WorkFlow() throws InterruptedException{
+
+
+	 public void Run_Approve_WorkFlow() throws InterruptedException{
 	
 	QuickSearchEnter.sendKeys("Lord");
 	Thread.sleep(5000);
@@ -539,6 +543,9 @@ public void Run_Approve_WorkFlow() throws InterruptedException{
 	
 	}
 
+
+
+	 
 public void AssignTask() throws InterruptedException{
 	
 	QuickSearchEnter.sendKeys("Lord");
@@ -561,6 +568,8 @@ public void AssignTask() throws InterruptedException{
 	
 	
 	}
+
+	
 
 public void Run_Approve_Task() throws InterruptedException{
 	
@@ -591,6 +600,7 @@ public void Run_Approve_Task() throws InterruptedException{
 	}
 
 
+
 public String Employee_Edit() throws InterruptedException{
 
 	QuickSearchEnter.sendKeys("Lord");
@@ -601,7 +611,7 @@ public String Employee_Edit() throws InterruptedException{
 	EmployeeProfile.click();
 	EmployeeEdit.click();
 	EmployeeEditEnter.clear();
-	EmployeeEditEnter.sendKeys("KrishnaPrabhu");
+	EmployeeEditEnter.sendKeys("LordPrabhu");
 	EmployeeEditedMakeSure.click();
 	
 	EmployeeEditSave.click();
@@ -610,6 +620,9 @@ public String Employee_Edit() throws InterruptedException{
 	
 	
 }
+
+
+	
 
 public String Dependent_Edit() throws InterruptedException{
 
@@ -630,6 +643,8 @@ public String Dependent_Edit() throws InterruptedException{
 	
 	
 }
+
+
 
 public void Add_Service() throws InterruptedException{
 	
@@ -654,6 +669,10 @@ public void Add_Service() throws InterruptedException{
 	
 }
 
+
+
+
+
 public boolean Generate_Document() throws InterruptedException{
 	
 	QuickSearchEnter.sendKeys("Lord");
@@ -670,6 +689,8 @@ public boolean Generate_Document() throws InterruptedException{
 
 
 }
+
+
 
 public boolean Edit_Service() throws InterruptedException{
 
@@ -696,6 +717,9 @@ return Employee_Service_Edit_MakeSure.isDisplayed();
 }
 
 
+
+
+
 public String Add_Note() throws InterruptedException{
 	
 	QuickSearchEnter.sendKeys("Lord");
@@ -718,6 +742,9 @@ public String Add_Note() throws InterruptedException{
 	
 	
 }
+
+
+
 
 public String Edit_Column()throws InterruptedException{
 	QuickSearchEnter.sendKeys("Lord");

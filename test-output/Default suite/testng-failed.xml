@@ -5,7 +5,6 @@
     <classes>
       <class name="com.bossc.qa.testcases.SettingsPageTest">
         <methods>
-          <include name="VerifyEmailService1"/>
           <include name="VerifyNewObjectCalculationFields"/>
           <include name="setUp"/>
         </methods>

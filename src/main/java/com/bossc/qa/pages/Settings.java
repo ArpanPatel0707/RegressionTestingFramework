@@ -354,19 +354,19 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
 	WebElement Objects_Fields_Target_Select;
 	
-	@FindBy(xpath="//mat-option[@id='mat-option-28']")
+	@FindBy(xpath="//span[text()=' SELF ']")
 	WebElement Objects_Fields_Target_Option;
 	
 	@FindBy(xpath="//mat-radio-button[@id='mat-radio-2']")
 	WebElement Objects_Fields_Aggregate;
 	
-	@FindBy(xpath="//input[@id='mat-input-22']")
+	@FindBy(xpath="//input[@id='mat-input-18']")
 	WebElement Objects_FieldCalculationFormulaOption;
 	
 	@FindBy(xpath="(//button[@class='add-mat-mini-fab mat-mini-fab mat-accent ng-star-inserted'])[2]")
 	WebElement Objects_FieldSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-11']")
+	@FindBy(xpath="//input[@id='mat-input-9']")
 	WebElement Objects_FieldFindTab;
 	
 	@FindBy(xpath="//div[@class='mat-list-item-content' and text()=' AutomationObjectCalc... ']")
@@ -422,6 +422,7 @@ public void CreateNewListField() throws InterruptedException{
 	Thread.sleep(2000);
 	FieldTypeList.click();
 	FieldDataTypeSelect.click();
+	Thread.sleep(2000);
 	FieldListDataTypeText.click();
 	FieldLength.sendKeys("12");
 	FieldListAllowedValues.click();
