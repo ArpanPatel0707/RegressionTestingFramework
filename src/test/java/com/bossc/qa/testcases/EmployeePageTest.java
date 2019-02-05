@@ -63,7 +63,7 @@ import com.bossc.qa.util.TestUtil;
 				}
 			return logindata;
 			}
-			/*
+			///*
 			
 			@Test(priority=1,dataProvider="LoginData")
 			public void VerifyNewEmployee(String FirstName, String LastName,String JobTitle, String ManagerName,String HiredDate,String AnnualPay) throws InterruptedException, IOException
@@ -74,23 +74,23 @@ import com.bossc.qa.util.TestUtil;
 				
 			} 
 			
-			*/
+			//*/
 			
 			
-			/*
+			///*
 			@Test(priority=2)
 			public void VerifyNewDepdent() throws InterruptedException{
 		    employees.AddNewDependent();
 				
 
-			} */
-/*
+			} //*/
+///*
 			@Test(priority=3)
 			public void VerifyNewBeneficiary() throws InterruptedException{
 		    employees.AddNewBeneficiary();
 				
 
-			} */
+			} //*/
 			
 			
 			
