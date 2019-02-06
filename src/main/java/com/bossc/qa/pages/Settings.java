@@ -18,6 +18,9 @@ public class Settings extends TestBase{
 	
 	JavascriptExecutor je1 = (JavascriptExecutor)driver;
 	
+	
+
+	
 // Settings
 	@FindBy(xpath="//div[@class='d-flex flex-row']/ul/li[6]")
     WebElement SettingsSection;
@@ -182,24 +185,44 @@ public class Settings extends TestBase{
 
 	@FindBy(xpath="//button[@class='btn bossc-btn right-panel-btn']")
 	WebElement CreateDocument;
+	
 
-	@FindBy(xpath="//input[@placeholder='enter document name...']")
+	@FindBy(xpath="//small[text()='add category']")
+	WebElement AddCategory;
+
+	@FindBy(xpath="//input[@id='mat-input-0']")
+	WebElement CategoryName;
+
+	@FindBy(xpath="//input[@id='mat-input-1']")
+	WebElement CategoryDescription;
+	
+	@FindBy(xpath="//button[text()='Create']")
+	WebElement CreateCategory;
+
+	@FindBy(xpath="//input[@id='mat-input-2']")
 	WebElement DocumentName;
 
 	@FindBy(xpath="//mat-select[@id='mat-select-0']")
 	WebElement DocumentCategorySelect;
 
-	@FindBy(xpath="//mat-option[@id='mat-option-2']")
+	@FindBy(xpath="//span[text()='Automation']")
 	WebElement DocumentCategoryOption;
 	
-	@FindBy(xpath="//textarea[@placeholder='enter document description...']")
+	@FindBy(xpath="//input[@id='mat-input-3']")
 	WebElement DocumentDescription;
 
-	@FindBy(xpath="//button[@class='btn bossc-btn']")
+	@FindBy(xpath="//button[text()='Save']")
 	WebElement DocumentSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-3']")
-	WebElement DocumentSaveId;
+	@FindBy(xpath="//div[@class='fr-element fr-view']")
+	WebElement DocumentContent;
+	
+	@FindBy(xpath="//button[@mattooltip='Save Document']")
+	WebElement DocumentSave2;
+	
+	@FindBy(xpath="//div[text()='Back']")
+	WebElement DocumentBack;
+	
 	
 	//Email Service
 	
@@ -288,7 +311,7 @@ public class Settings extends TestBase{
 	
 
 	@FindBy(xpath="(//mat-table/mat-row/mat-cell)[2]")
-	WebElement EmployeeSearchClick;
+	WebElement ResultSearchClick;
 	
 	
 	@FindBy(xpath="//button[@title='Profile']")
@@ -313,9 +336,18 @@ public class Settings extends TestBase{
 	@FindBy(xpath="(//div[text()=' Employee Profile '])[2]")
 	WebElement EmployeeEditedMakeSure;
 	
+    @FindBy(xpath="//button[@type='button']")
+	WebElement EmailAction;
+	
+	@FindBy(xpath="//div[text()='Automation']")
+	WebElement EmailActionMessage;
+
+	
 
 	@FindBy(xpath="//i[@class='fa fa-search']")
 	WebElement QuickSearchClick;
+	
+	
 	
 	//Create new object calculation fields
 	
@@ -429,6 +461,7 @@ public void CreateNewListField() throws InterruptedException{
 	FieldListAllowedValues.click();
 	Thread.sleep(2000);
 	FieldListAllowedValuesAdd.click();
+	Thread.sleep(2000);
 	FieldListAllowedValuesEnter1.sendKeys("USA");
 	FieldListAllowedDescription1.sendKeys("NewYork");
 	FieldListAllowedValuesAdd.click();
@@ -541,13 +574,31 @@ public void CretaeNewDocument() throws InterruptedException{
 	
 	Document.click();
 	CreateDocument.click();
-	DocumentName.sendKeys("AutomatedDocument");
 	Thread.sleep(2000);
-	DocumentCategorySelect.click();
-	DocumentCategoryOption.click();
+	AddCategory.click();
+	CategoryName.sendKeys("Automation");
+	CategoryDescription.sendKeys("Automation");
+	CreateCategory.click();
+	DocumentName.sendKeys("TestEmailService");
+	Thread.sleep(2000);
+	//DocumentCategorySelect.click();
+	//Thread.sleep(2000);
+	//DocumentCategoryOption.click();
     DocumentDescription.sendKeys("Testing Purpose");
 	DocumentSave.click();
 	Thread.sleep(2000);
+	DocumentContent.sendKeys("Automation");
+	DocumentSave2.click();
+	DocumentBack.click();
+	QuickSearchEnter.sendKeys("TestEmailService");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	
+	Thread.sleep(2000);
+	
+	ResultSearchClick.click();
+	
+	
 	
 	
 
@@ -562,8 +613,13 @@ public void EmailService1() throws InterruptedException{
 	Thread.sleep(1000);
 	FieldsFindPeopleEmailResult.click();
 	Thread.sleep(2000);
-
-	DedicatedEmail.click();
+	WebElement e = driver.findElement(By.xpath("//mat-checkbox[@id='mat-checkbox-4']"));
+   if (e.getAttribute("ng-reflect-model").equals("false")) {
+	   DedicatedEmail.click();
+	   }
+   else{
+		System.out.println("Dedicated Email is already checked!");
+	}
 	FieldSave.click();
 	Thread.sleep(3000);
 	SettingsSection.click();
@@ -575,6 +631,7 @@ public void EmailService1() throws InterruptedException{
 	Thread.sleep(1000);
 	ActionTypeOption.click();
 	ActionDocumentSelect.click();
+	Thread.sleep(1000);
 	ActionDocumentOption.click();
 	ActionSave.click();
 	Thread.sleep(2000);
@@ -602,13 +659,13 @@ public void EmailService1() throws InterruptedException{
 	
 }
 
-public void EmailService2() throws InterruptedException{
+public String EmailService2() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
 	Thread.sleep(5000);
 	QuickSearchClick.click();
-	EmployeeSearchClick.click();
+	ResultSearchClick.click();
 	Thread.sleep(2000);
 	EmployeeProfile.click();
 	EmployeeEdit.click();
@@ -617,12 +674,17 @@ public void EmailService2() throws InterruptedException{
 	EmployeeEditEnterLastName.clear();
 	EmployeeEditEnterLastName.sendKeys("EMail");
 	EmployeeEditedMakeSure.click();
+	Thread.sleep(1000);
 	EmployeeEditSave.click();
 	Thread.sleep(1000);
 	SettingsSection.click();
-	Thread.sleep(1000);
+	Thread.sleep(5000);
 	je.executeScript("arguments[0].scrollIntoView(true);",EmailSection);
+	
 	EmailSection.click();
+	EmailAction.click();
+	return EmailActionMessage.getText();
+	
 	
 	
 }

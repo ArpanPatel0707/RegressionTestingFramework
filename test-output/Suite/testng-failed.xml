@@ -8,20 +8,11 @@
     <classes>
       <class name="com.bossc.qa.testcases.EmployeePageTest">
         <methods>
-          <include name="Edit_Service"/>
-          <include name="VerifyEditDependent"/>
-          <include name="tearDown"/>
+          <include name="VerifyRunWorkFlow"/>
           <include name="setUp"/>
-          <include name="VerifyAddService"/>
+          <include name="VerifyAssignWorkFlow"/>
         </methods>
       </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
-      <class name="com.bossc.qa.testcases.SettingsPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="VerifyNewObjectCalculationFields"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </classes>
   </test> <!-- BOSSC Web TestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

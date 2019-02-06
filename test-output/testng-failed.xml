@@ -5,12 +5,8 @@
     <classes>
       <class name="com.bossc.qa.testcases.EmployeePageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="VerifyAddNotes"/>
+          <include name="VerifyUpload_Document"/>
           <include name="setUp"/>
-          <include name="VerifyAssignTask"/>
-          <include name="VerifyRunTask"/>
-          <include name="VerifyAssignWorkFlow"/>
         </methods>
       </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
     </classes>

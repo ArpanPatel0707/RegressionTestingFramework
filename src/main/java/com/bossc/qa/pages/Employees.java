@@ -111,7 +111,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@class='btn bossc-btn']")
 	WebElement DepSave;
 
-	@FindBy(xpath="//img[@src='/assets/icons/camera.svg']")
+	@FindBy(xpath="//a[text()='VIEW PROFILE']")
 	WebElement DepSaveId;
 
 	
@@ -222,7 +222,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Save Profile']")
 	WebElement EmployeeEditSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-22']")
+	@FindBy(xpath="//input[@id='mat-input-18']")
 	WebElement EmployeeEditedValue;
 	
 	@FindBy(xpath="(//div[text()=' Employee Profile '])[2]")
@@ -356,7 +356,31 @@ public class Employees extends TestBase{
     @FindBy(xpath="//mat-cell[text()=' January 1, 2019 ']")
    	WebElement EmployeeHiredDateDirectory;
        
+	//Upload Document
+    
+    @FindBy(xpath="//button[text()=' UPLOAD FILE ']")
+	WebElement Employee_UploadDocument;
 	
+	@FindBy(xpath="//div[@class='dnd-area']")
+	WebElement Employee_DocumentLocation;
+	
+    @FindBy(xpath="//input[@id='mat-input-0']")
+	WebElement Employee_DocumentFileName;
+    
+    @FindBy(xpath="//input[@id='mat-input-1']")
+   	WebElement Employee_DocumentDescription;
+    
+    @FindBy(xpath="//mat-select[@id='mat-select-1']")
+	WebElement Employee_DocumentCategorySelect;
+	
+	@FindBy(xpath="//span[text()=' Automation ']")
+	WebElement Employee_DocumentCategoryOption;
+	
+    @FindBy(xpath="//button[text()='Upload & Quit']")
+	WebElement Employee_Upload_Quit;
+   
+    
+    
 
 	//Initializing the Page Objects:
 	public Employees(){
@@ -670,7 +694,26 @@ public void Add_Service() throws InterruptedException{
 }
 
 
+public boolean Upload_Document() throws InterruptedException{
+	
+	QuickSearchEnter.sendKeys("Lord");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	EmployeeSearchClick.click();
+	Thread.sleep(2000);
+	Employee_Documents.click();
+	Employee_UploadDocument.click();
+	Employee_DocumentLocation.click();//sendKeys("C:\\Users\\apatel\\Pictures\\Saved Pictures\\download.jpg");
+	Employee_DocumentFileName.sendKeys("Automation");
+	Employee_DocumentDescription.sendKeys("Automation");
+	Employee_DocumentCategorySelect.click();
+	Employee_DocumentCategoryOption.click();
+	Employee_Upload_Quit.click();
+	Thread.sleep(5000);
+	return Employee_GenerateDocumentsMakeSure.isDisplayed();
 
+
+}
 
 
 public boolean Generate_Document() throws InterruptedException{

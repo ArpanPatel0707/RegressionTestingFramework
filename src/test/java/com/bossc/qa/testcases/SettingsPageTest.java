@@ -1,5 +1,7 @@
 package com.bossc.qa.testcases;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
@@ -38,23 +40,23 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-///*
+/*
 		 @Test(priority=1)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
 			settings.CreateNewStaticField();
 			
 			
-		}//*/
-	///*
+		}*/
+	/*
 		@Test(priority=2)
 		public void VerifyNewListField() throws InterruptedException{
 		
 			settings.CreateNewListField();
 			
 			
-		}//*/
-		///*
+		}*/
+		/*
 		@DataProvider(name="ConstantData")
 		String [][] getData() throws IOException
 		{
@@ -83,15 +85,15 @@ public class SettingsPageTest extends TestBase{
 			settings.CreateNewConstantField(ConstantName,ConstantDisplayName,Value);
 			
 			
-		}//*/
-		///*
+		}*/
+		/*
 		@Test(priority=4)
 		public void VerifyNewCalculationField() throws InterruptedException{
 			
 			settings.CreateNewCalculationField();
 			
 			
-		}//*/
+		}*/
 		
 		
 		// ar
@@ -104,17 +106,19 @@ public class SettingsPageTest extends TestBase{
 			
 		//}
 		
-	//	@Test(priority=6)
-		//public void VerifyNewDocument() throws InterruptedException{
+	///*	
+		@Test(priority=6)
+		public void VerifyNewDocument() throws InterruptedException{
 		
-		// settings.CretaeNewDocument();
+		settings.CretaeNewDocument();
 	
 			
-		//}
+		}
 		
-
+//*/
 		
-	/*@Test(priority=7)
+	/*
+		@Test(priority=7)
 		public void VerifyEmailService1() throws InterruptedException{
 		
 		 settings.EmailService1();
@@ -122,13 +126,13 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	
-
+	*/
+/*
 		@Test(priority=8)
 		public void VerifyEmailService2() throws InterruptedException, IOException{
 		
-		 settings.EmailService2();
-		 
+		String EmailMessage = settings.EmailService2();
+		assertEquals(EmailMessage,"Automation");
 		
 	
 			
@@ -139,7 +143,7 @@ public class SettingsPageTest extends TestBase{
 		
 		
 		
-	///*
+	/*
 	 @Test(priority=9)
 	 
 		public void VerifyNewObjectCalculationFields() throws InterruptedException{
@@ -149,9 +153,10 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 	 
-		//*/
+		*/
 	
-    /*  @AfterMethod
+	  /* 
+	 @AfterMethod
 		public void tearDown(){
 			driver.quit();
 		}
