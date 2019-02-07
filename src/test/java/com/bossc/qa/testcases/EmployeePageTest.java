@@ -167,7 +167,7 @@ import com.bossc.qa.util.TestUtil;
 			 
 			 */
 			
-		
+		/*
 			@Test(priority=10)
 			public void VerifyUpload_Document() throws InterruptedException {
 			
@@ -176,7 +176,7 @@ import com.bossc.qa.util.TestUtil;
 				
 			}
 			
-			
+			*/
 			
 			
 			

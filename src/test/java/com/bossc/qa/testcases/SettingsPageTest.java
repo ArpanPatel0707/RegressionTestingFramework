@@ -1,9 +1,11 @@
 package com.bossc.qa.testcases;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -106,7 +108,7 @@ public class SettingsPageTest extends TestBase{
 			
 		//}
 		
-	///*	
+	/*	
 		@Test(priority=6)
 		public void VerifyNewDocument() throws InterruptedException{
 		
@@ -115,7 +117,7 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-//*/
+*/
 		
 	/*
 		@Test(priority=7)
@@ -139,6 +141,210 @@ public class SettingsPageTest extends TestBase{
 		}
 		
 		*/
+/*
+		@Test(priority=9)
+		public void VerifyEventCreationEnableAccount() throws InterruptedException, IOException{
+		
+		 settings.EnableAccount1();
+		
+		
+	
+			
+		}
+		
+	*/
+		
+/*
+		@Test(priority=9,dependsOnMethods={ "VerifyEventCreationEnableAccount" })
+		public void VerifyEventPerformanceEnableAccount() throws InterruptedException, IOException{
+		
+		String EnableAccountResult = settings.EnableAccount2();
+		assertEquals(EnableAccountResult,"true");
+		
+		
+	
+			
+		}
+	*/	
+		/*
+				@Test(priority=10)
+				public void VerifyEventCreationDisableAccount() throws InterruptedException, IOException{
+				
+				 settings.DisableAccount1();
+				
+				
+			
+					
+				}
+				
+			*/
+				
+		/*
+				@Test(priority=11,dependsOnMethods={ "VerifyEventCreationDisableAccount" })
+				public void VerifyEventPerformanceDisableAccount() throws InterruptedException, IOException{
+				
+				String EnableDisableResult = settings.DisableAccount2();
+				assertEquals(EnableDisableResult,"false");
+				
+				
+			
+					
+				}
+			*/
+		
+				/*
+				@Test(priority=12)
+				public void VerifyEventCreationGrantMobile() throws InterruptedException, IOException{
+				
+				 settings.GrantMobile1();
+				
+				
+			
+					
+				}
+				
+			*/
+				
+		/*
+				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationGrantMobile" })
+				public void VerifyEventPerformanceGrantMobile() throws InterruptedException, IOException{
+				
+				String GrantMobileResult = settings.GrantMobile2();
+				assertEquals(GrantMobileResult,"true");
+				
+				
+			
+					
+				}
+			*/
+				/*
+				@Test(priority=12)
+				public void VerifyEventCreationRevokeMobile() throws InterruptedException, IOException{
+				
+				 settings.RevokeMobile1();
+				
+				
+			
+					
+				}
+				
+			*/
+				
+		/*
+				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationRevokeMobile" })
+				public void VerifyEventPerformanceRevokeMobile() throws InterruptedException, IOException{
+				
+				String GrantMobileResult = settings.RevokeMobile2();
+				assertEquals(GrantMobileResult,"false");
+				
+				
+			
+					
+				}
+			*/
+				/*
+				@Test(priority=12)
+				public void VerifyEventCreationHealthObject() throws InterruptedException, IOException{
+				
+				 settings.CreateHealthObject1();
+				
+				
+			
+					
+				}
+				
+			*/
+				
+		/*
+				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationHealthObject" })
+				public void VerifyEventPerformanceCreateHealthObject() throws InterruptedException, IOException{
+				
+				 settings.CreateHealthObject2();
+			
+				
+				
+			
+					
+				}
+			*/
+		/*
+		@Test(priority=12)
+		public void VerifyEventTerminateHealthObject() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject1();
+		
+		
+	
+			
+		}
+		
+	*/
+		
+/*
+		@Test//(priority=13,dependsOnMethods={ "VerifyEventTerminateHealthObject" })
+		public void VerifyEventPerformanceTerminateHealthObject() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject2();
+	
+		
+		
+	
+			
+		}
+	*/
+		/*
+		@Test(priority=12)
+		public void VerifyEventCreationFieldUpdate() throws InterruptedException, IOException{
+		
+		 settings.FieldUpdate1();
+		
+		
+	
+			
+		}
+		
+	*/
+		
+/*
+		@Test(priority=13,dependsOnMethods={ "VerifyEventCreationFieldUpdate" })
+		public void VerifyEventPerformanceFieldUpdate() throws InterruptedException, IOException{
+		
+		String resultFieldUpdate =  settings.FieldUpdate2();
+	    assertEquals(resultFieldUpdate,"Lord");
+		
+		
+	
+			
+		}
+	*/
+		///*
+				@Test(priority=12)
+				public void VerifyEventCreationDependentFieldUpdate() throws InterruptedException, IOException{
+				
+				 settings.DependentFieldUpdate1();
+				
+				
+			
+					
+				}
+				
+			//*/
+				
+		///*
+				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationDependentFieldUpdate" })
+				public void VerifyEventPerformanceDependentFieldUpdate() throws InterruptedException, IOException{
+				
+				String resultDependentFieldUpdate =  settings.DependentFieldUpdate2();
+			    assertEquals(resultDependentFieldUpdate,"CristianoDep");
+				
+				
+			
+					
+				}
+			//*/
+				
+		
+		
 		
 		
 		

@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.bossc.qa.testcases.EmployeePageTest">
+      <class name="com.bossc.qa.testcases.SettingsPageTest">
         <methods>
-          <include name="VerifyUpload_Document"/>
+          <include name="VerifyEventPerformanceFieldUpdate"/>
+          <include name="VerifyEventCreationFieldUpdate"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
+      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
