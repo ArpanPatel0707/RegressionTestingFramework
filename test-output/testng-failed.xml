@@ -5,8 +5,8 @@
     <classes>
       <class name="com.bossc.qa.testcases.SettingsPageTest">
         <methods>
-          <include name="VerifyEventPerformanceFieldUpdate"/>
-          <include name="VerifyEventCreationFieldUpdate"/>
+          <include name="VerifyEventPerformanceAssignWorkFlowF"/>
+          <include name="VerifyEventAssignWorkFlowF"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->

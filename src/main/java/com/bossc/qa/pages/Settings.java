@@ -19,8 +19,37 @@ public class Settings extends TestBase{
 	
 	JavascriptExecutor je1 = (JavascriptExecutor)driver;
 	
+	// Copied
 	
+	@FindBy(xpath="//button[@title='Create New Employee']")
+	WebElement AddEmployee;
 
+	@FindBy(xpath="//input[@id='mat-input-0']")//div[@class='row people-container pb-4 mb-5']/div[2]/mat-table/mat-row/mat-cell[2])[2]
+	WebElement EmployeeFirstName;
+
+	@FindBy(xpath="//input[@id='mat-input-1']")
+	WebElement EmployeeLastName;
+	
+	@FindBy(xpath="//input[@id='mat-input-2']")
+	WebElement EmployeeJobTitle;
+
+	@FindBy(xpath="//input[@id='mat-input-3']")
+	WebElement EmployeeManagerName;
+
+	@FindBy(xpath="//input[@id='mat-input-4']")
+	WebElement EmployeeHiredDate;
+	
+	@FindBy(xpath="//input[@id='mat-input-5']")
+	WebElement EmployeeAnnualPay;
+
+	@FindBy(xpath="//button[text()='Save']")
+	WebElement EmployeeSave;
+
+	@FindBy(xpath="//button[@title='Workflows']")
+	WebElement ButtonWorkFlow;
+	
+	@FindBy(xpath="//mat-cell[text()=' Emergency Days ']")
+	WebElement VerifyAssignTask_WorkFlow;
 	
 // Settings
 	
@@ -287,6 +316,9 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//span[text()=' Create Object ']")
 	WebElement ActionTypeCreateObjectOption;
 	
+	@FindBy(xpath="//span[text()=' Assign Workflow ']")
+	WebElement ActionTypeAssignWorkFlowOption;
+	
 	@FindBy(xpath="//span[text()=' Field Update ']")
 	WebElement ActionTypeFieldUpdateOption;
 	
@@ -301,6 +333,9 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//span[text()=' Extended Health Care ']")
 	WebElement ObjectTypeOption;
+	
+	@FindBy(xpath="//span[text()=' Emergency Days ']")
+	WebElement TypeOfWorkFlowOption;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-1']")
 	WebElement FieldUpdateTargetSelect;
@@ -320,6 +355,12 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//span[text()=' Single ']")
 	WebElement ObjectCategoryOption;
+	
+	@FindBy(xpath="//span[text()=' Hired Date ']")
+	WebElement StartDateOption;
+	
+	@FindBy(xpath="//span[text()=' System Date ']")
+	WebElement EndDateOption;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
 	WebElement ObjectStatusSelect;
@@ -353,6 +394,9 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//input[@id='mat-input-2']")
 	WebElement EventName;
 	
+	@FindBy(xpath="//input[@id='mat-input-0']")
+	WebElement EventNameC;
+	
 	@FindBy(xpath="//input[@id='mat-input-3']")
 	WebElement FieldUpdateEventName;
 	
@@ -366,9 +410,14 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-1']")
 	WebElement TriggerIntiatorsSelect;
 	
+	@FindBy(xpath="//mat-select[@id='mat-select-0']")
+	WebElement TriggerIntiatorsSelectC;
 
 	@FindBy(xpath="//mat-select[@id='mat-select-4']")
 	WebElement CreateObjectTriggerIntiatorsSelect;
+	
+	@FindBy(xpath="//mat-select[@id='mat-select-5']")
+	WebElement AssignWorkFlowTriggerIntiatorsSelect;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-2']")
 	WebElement TerminateObjectTriggerIntiatorsSelect;
@@ -379,14 +428,23 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//span[text()=' Field Update ']")
 	WebElement TriggerIntiatorsOption;
 	
-	@FindBy(xpath="//mat-select[@id='mat-select-7']")
+	@FindBy(xpath="//span[text()=' Create Record ']")
+	WebElement TriggerIntiatorsOptionC;
+	
+    @FindBy(xpath="//mat-select[@id='mat-select-7']")
 	WebElement EmailTriggerPersonTypeSelect;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-2']")
 	WebElement TriggerPersonTypeSelect;
 	
+	@FindBy(xpath="//mat-select[@id='mat-select-1']")
+	WebElement TriggerPersonTypeSelectC;
+	
 	@FindBy(xpath="//mat-select[@id='mat-select-5']")
 	WebElement CreateObjectTriggerPersonTypeSelect;
+	
+	@FindBy(xpath="//mat-select[@id='mat-select-6']")
+	WebElement AssignWorkFlowTriggerPersonTypeSelect;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
 	WebElement TerminateObjectTriggerPersonTypeSelect;
@@ -407,6 +465,9 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-7']")
 	WebElement CreateObjectTriggerFieldsSelect;
 	
+	@FindBy(xpath="//mat-select[@id='mat-select-8']")
+	WebElement AssignWorkFlowTriggerFieldsSelect;
+	
 	@FindBy(xpath="//mat-select[@id='mat-select-5']")
 	WebElement TerminateObjectTriggerFieldsSelect;
 	
@@ -422,8 +483,15 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
 	WebElement PerformActionSelect;
 	
+	@FindBy(xpath="//mat-select[@id='mat-select-2']")
+	WebElement PerformActionSelectC;
+	
+
 	@FindBy(xpath="//mat-select[@id='mat-select-6']")
 	WebElement CreateObjectPerformActionSelect;
+	
+	@FindBy(xpath="//mat-select[@id='mat-select-7']")
+	WebElement AssignWorkFlowPerformActionSelect;
 	
 	@FindBy(xpath="//mat-select[@id='mat-select-4']")
 	WebElement TerminateObjectPerformActionSelect;
@@ -449,6 +517,9 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//span[text()=' AutomationCreateObjectAction ']")
 	WebElement PerformActionCreateObjectOption;
+	
+	@FindBy(xpath="//span[text()=' AutomationAssignWorkFlowAction ']")
+	WebElement PerformActionAssignWorkFlowOption;
 	
 	@FindBy(xpath="//span[text()=' AutomationTerminateObjectAction ']")
 	WebElement PerformActionTerminateObjectOption;
@@ -500,6 +571,9 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//input[@id='mat-input-20']")
 	WebElement EmployeeEditedValue;
+	
+	@FindBy(xpath="//input[@id='mat-input-8']")
+	WebElement EmployeeEditedValueF;
 	
 	@FindBy(xpath="(//div[text()=' Employee Profile '])[2]")
 	WebElement EmployeeEditedMakeSure;
@@ -877,7 +951,7 @@ public String EmailService2() throws InterruptedException{
 	
 	
 }
-public void EnableAccount1() throws InterruptedException{
+public void EnableAccount1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -920,7 +994,7 @@ public void EnableAccount1() throws InterruptedException{
 	
 	
 }
-public String EnableAccount2() throws InterruptedException{
+public String EnableAccount2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -947,7 +1021,7 @@ public String EnableAccount2() throws InterruptedException{
 
 }
 
-public void DisableAccount1() throws InterruptedException{
+public void DisableAccount1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -990,7 +1064,7 @@ public void DisableAccount1() throws InterruptedException{
 	
 	
 }
-public String DisableAccount2() throws InterruptedException{
+public String DisableAccount2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1015,7 +1089,7 @@ public String DisableAccount2() throws InterruptedException{
 	
 }
 
-public void GrantMobile1() throws InterruptedException{
+public void GrantMobile1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -1060,7 +1134,7 @@ public void GrantMobile1() throws InterruptedException{
 	
 	
 }
-public String GrantMobile2() throws InterruptedException{
+public String GrantMobile2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1086,7 +1160,7 @@ public String GrantMobile2() throws InterruptedException{
 	
 
 }
-public void RevokeMobile1() throws InterruptedException{
+public void RevokeMobile1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -1131,7 +1205,7 @@ public void RevokeMobile1() throws InterruptedException{
 	
 	
 }
-public String RevokeMobile2() throws InterruptedException{
+public String RevokeMobile2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1157,7 +1231,7 @@ public String RevokeMobile2() throws InterruptedException{
 	
 
 }
-public void CreateHealthObject1() throws InterruptedException{
+public void CreateHealthObject1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -1211,7 +1285,7 @@ public void CreateHealthObject1() throws InterruptedException{
 	
 	
 }
-public void CreateHealthObject2() throws InterruptedException{
+public void CreateHealthObject2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1237,7 +1311,7 @@ public void CreateHealthObject2() throws InterruptedException{
 
 }
 
-public void TerminateHealthObject1() throws InterruptedException{
+public void TerminateHealthObject1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -1287,7 +1361,7 @@ public void TerminateHealthObject1() throws InterruptedException{
 	
 	
 }
-public void TerminateHealthObject2() throws InterruptedException{
+public void TerminateHealthObject2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1313,7 +1387,7 @@ public void TerminateHealthObject2() throws InterruptedException{
 
 }
 
-public void FieldUpdate1() throws InterruptedException{
+public void FieldUpdate1F() throws InterruptedException{
 	
     SettingsSection.click();
 	Automation.click();
@@ -1366,7 +1440,7 @@ public void FieldUpdate1() throws InterruptedException{
 	
 	
 }
-public String FieldUpdate2() throws InterruptedException{
+public String FieldUpdate2F() throws InterruptedException{
 	
 	EmployeesSection1.click();
 	QuickSearchEnter.sendKeys("Lord");
@@ -1471,6 +1545,621 @@ public String DependentFieldUpdate2() throws InterruptedException{
 	
 
 }
+
+public void AssignWorkFlow1F() throws InterruptedException{
+	
+    SettingsSection.click();
+	Automation.click();
+	CreateNewAction.click();
+	ActionName.sendKeys("AutomationAssignWorkFlowAction");
+	ActionDescription.sendKeys("AutomationAssignWorkFlowAction");
+	ActionTypeSelect.click();
+	Thread.sleep(1000);
+	ActionTypeAssignWorkFlowOption.click();
+	Thread.sleep(1000);
+	ObjectTypeSelect.click();
+	Thread.sleep(1000);
+	TypeOfWorkFlowOption.click();
+	
+	ObjectCategorySelect.click();
+	Thread.sleep(1000);
+	StartDateOption.click();
+	ObjectStatusSelect.click();
+	Thread.sleep(1000);
+	EndDateOption.click();
+    ActionSave.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	Thread.sleep(1000);
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventName.sendKeys("AutomationTrigeerEvent");
+	EventStatus.click();
+	AssignWorkFlowTriggerIntiatorsSelect.click();
+	Thread.sleep(1000);
+	TriggerIntiatorsOption.click();
+	AssignWorkFlowTriggerPersonTypeSelect.click();
+	Thread.sleep(1000);
+	TriggerPersonTypeOption.click();
+	AssignWorkFlowTriggerFieldsSelect.click();
+	Thread.sleep(1000);
+	TriggerFieldsOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",AssignWorkFlowPerformActionSelect);
+	AssignWorkFlowPerformActionSelect.click();
+	Thread.sleep(1000);
+	PerformActionAssignWorkFlowOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",AssignWorkFlowPerformActionSelect);
+	AddDescription.sendKeys("AutomationAssignWorkFlow");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+	
+	
+}
+public void AssignWorkFlow2F() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	QuickSearchEnter.sendKeys("Lord");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	EmployeeProfile.click();
+	EmployeeEdit.click();
+	EmployeeEditEnterLastName.clear();
+	EmployeeEditEnterLastName.sendKeys("AssignWorkFlow");
+	EmployeeEditedMakeSure.click();
+	Thread.sleep(1000);
+	EmployeeEditSave.click();
+	Thread.sleep(5000);
+	ButtonWorkFlow.click();
+	VerifyAssignTask_WorkFlow.click();
+	
+	
+	
+
+	
+	
+
+}
+public void EnableAccount1C() throws InterruptedException{
+	
+    SettingsSection.click();
+	Automation.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventNameC.sendKeys("AutomationCreateRecordEvent");
+	EventStatus.click();
+	TriggerIntiatorsSelectC.click();
+	TriggerIntiatorsOptionC.click();
+	TriggerPersonTypeSelectC.click();
+	TriggerPersonTypeOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	PerformActionSelectC.click();
+	Thread.sleep(1000);
+	PerformActionEnableAccountOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	AddDescription.sendKeys("AutomationEnableAccount");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+	
+	
+}
+public String EnableAccount2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	AddEmployee.click();
+	EmployeeFirstName.sendKeys("EnableAccount");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("EnableAccount");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	
+	
+	return EnableAccountClick.getAttribute("ng-reflect-model");
+	
+	
+	
+
+}
+public void DisableAccount1C() throws InterruptedException{
+	
+	SettingsSection.click();
+	Automation.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventNameC.sendKeys("AutomationCreateRecordEvent");
+	EventStatus.click();
+	TriggerIntiatorsSelectC.click();
+	TriggerIntiatorsOptionC.click();
+	TriggerPersonTypeSelectC.click();
+	TriggerPersonTypeOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	PerformActionSelectC.click();
+	Thread.sleep(1000);
+	PerformActionDisableAccountOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	AddDescription.sendKeys("AutomationDisableAccount");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+	
+	
+	
+}
+public String DisableAccount2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	Thread.sleep(1000);
+	AddEmployee.click();
+
+	EmployeeFirstName.sendKeys("DisableAccount");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("DisableAccount");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	
+	
+	return EnableAccountClick.getAttribute("ng-reflect-model");
+	
+	
+	
+	
+}
+public void GrantMobile1C() throws InterruptedException{
+	
+	    SettingsSection.click();
+		Automation.click();
+		Thread.sleep(2000);
+		EventClick.click();
+		QuickSearchEnter.sendKeys("Automation");
+		Thread.sleep(2000);
+		QuickSearchClick.click();
+		DeleteEvent.click();
+		DeleteEventForSure.click();
+		Thread.sleep(1000);
+
+	    CreateNewEvent.click();
+		EventNameC.sendKeys("AutomationCreateRecordEvent");
+		EventStatus.click();
+		TriggerIntiatorsSelectC.click();
+		TriggerIntiatorsOptionC.click();
+		TriggerPersonTypeSelectC.click();
+		TriggerPersonTypeOption.click();
+		je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		PerformActionSelectC.click();
+		Thread.sleep(1000);
+		PerformActionGrantMobileOption.click();
+		Thread.sleep(5000);
+		je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		AddDescription.sendKeys("AutomationGrantMobile");
+		Thread.sleep(2000);
+		SaveAsNewEvent.click();
+
+		
+	
+	
+}
+public String GrantMobile2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	AddEmployee.click();
+	EmployeeFirstName.sendKeys("GrantMobile");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("GrantMobile");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	
+	
+	return EnableMobileClick.getAttribute("ng-reflect-model");
+	
+	
+	
+
+}
+
+     public void RevokeMobile1C() throws InterruptedException{
+	
+	    SettingsSection.click();
+		Automation.click();
+		Thread.sleep(2000);
+		EventClick.click();
+		QuickSearchEnter.sendKeys("Automation");
+		Thread.sleep(2000);
+		QuickSearchClick.click();
+		DeleteEvent.click();
+		DeleteEventForSure.click();
+		Thread.sleep(1000);
+
+	    CreateNewEvent.click();
+		EventNameC.sendKeys("AutomationCreateRecordEvent");
+		EventStatus.click();
+		TriggerIntiatorsSelectC.click();
+		TriggerIntiatorsOptionC.click();
+		TriggerPersonTypeSelectC.click();
+		TriggerPersonTypeOption.click();
+		je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		PerformActionSelectC.click();
+		Thread.sleep(1000);
+		PerformActionRevokeMobileOption.click();
+		Thread.sleep(5000);
+		je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		AddDescription.sendKeys("AutomationRevokeMobile");
+		Thread.sleep(2000);
+		SaveAsNewEvent.click();
+
+		
+	
+
+	
+	
+}
+public String RevokeMobile2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	AddEmployee.click();
+	EmployeeFirstName.sendKeys("RevokeMobile");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("RevokeMobile");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	
+	
+	return EnableMobileClick.getAttribute("ng-reflect-model");
+	
+	
+	
+
+}
+public void CreateHealthObject1C() throws InterruptedException{
+	
+	 SettingsSection.click();
+		Automation.click();
+		Thread.sleep(2000);
+		EventClick.click();
+		QuickSearchEnter.sendKeys("Automation");
+		Thread.sleep(2000);
+		QuickSearchClick.click();
+		DeleteEvent.click();
+		DeleteEventForSure.click();
+		Thread.sleep(1000);
+
+	    CreateNewEvent.click();
+		EventNameC.sendKeys("AutomationCreateRecordEvent");
+		EventStatus.click();
+		TriggerIntiatorsSelectC.click();
+		TriggerIntiatorsOptionC.click();
+		TriggerPersonTypeSelectC.click();
+		TriggerPersonTypeOption.click();
+		je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		PerformActionSelectC.click();
+		Thread.sleep(1000);
+		PerformActionCreateObjectOption.click();
+		Thread.sleep(5000);
+		je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+		AddDescription.sendKeys("AutomationCreateObject");
+		Thread.sleep(2000);
+		SaveAsNewEvent.click();
+
+		
+	
+	
+}
+public void CreateHealthObject2C() throws InterruptedException{
+	
+
+
+	EmployeesSection1.click();
+	Thread.sleep(1000);
+	AddEmployee.click();
+	EmployeeFirstName.sendKeys("CreateObject");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("CreateObject");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	Employee_Service.click();
+	Employee_CreateObject_MakeSure.click();
+	
+
+	
+	
+
+}
+
+
+public void TerminateHealthObject1C() throws InterruptedException{
+	
+	SettingsSection.click();
+	Automation.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventNameC.sendKeys("AutomationCreateRecordEvent");
+	EventStatus.click();
+	TriggerIntiatorsSelectC.click();
+	TriggerIntiatorsOptionC.click();
+	TriggerPersonTypeSelectC.click();
+	TriggerPersonTypeOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	PerformActionSelectC.click();
+	Thread.sleep(1000);
+	PerformActionTerminateObjectOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	AddDescription.sendKeys("AutomationTerminateObject");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+	
+	
+}
+public void TerminateHealthObject2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	Thread.sleep(1000);
+	AddEmployee.click();
+	EmployeeFirstName.sendKeys("TerminateObject");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("TerminateObject");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	Employee_Service.click();
+	Dimension arpan = Employee_CreateObject_MakeSure.getSize();
+	System.out.println(arpan);
+	
+
+	
+
+	
+}
+
+public void FieldUpdate1C() throws InterruptedException{
+	
+	SettingsSection.click();
+	Automation.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventNameC.sendKeys("AutomationCreateRecordEvent");
+	EventStatus.click();
+	TriggerIntiatorsSelectC.click();
+	TriggerIntiatorsOptionC.click();
+	TriggerPersonTypeSelectC.click();
+	TriggerPersonTypeOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	PerformActionSelectC.click();
+	Thread.sleep(1000);
+	PerformActionFieldUpdateOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	AddDescription.sendKeys("AutomationFieldUpdate");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+	
+	
+}
+public String FieldUpdate2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	Thread.sleep(1000);
+	AddEmployee.click();
+	Thread.sleep(1000);
+	EmployeeFirstName.sendKeys("FieldUpdate");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("FieldUpdate");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	EmployeeProfile.click();
+    Thread.sleep(1000);
+	return EmployeeEditedValue.getAttribute("ng-reflect-model");
+
+	
+
+	
+	
+
+}
+
+
+public void AssignWorkFlow1C() throws InterruptedException{
+	
+	SettingsSection.click();
+	Automation.click();
+	Thread.sleep(2000);
+	EventClick.click();
+	QuickSearchEnter.sendKeys("Automation");
+	Thread.sleep(2000);
+	QuickSearchClick.click();
+	DeleteEvent.click();
+	DeleteEventForSure.click();
+	Thread.sleep(1000);
+
+    CreateNewEvent.click();
+	EventNameC.sendKeys("AutomationCreateRecordEvent");
+	EventStatus.click();
+	TriggerIntiatorsSelectC.click();
+	TriggerIntiatorsOptionC.click();
+	TriggerPersonTypeSelectC.click();
+	TriggerPersonTypeOption.click();
+	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	PerformActionSelectC.click();
+	Thread.sleep(1000);
+	PerformActionAssignWorkFlowOption.click();
+	Thread.sleep(5000);
+	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
+	AddDescription.sendKeys("AutomationAssignWorkFlow");
+	Thread.sleep(2000);
+	SaveAsNewEvent.click();
+
+
+	
+	
+}
+
+public void AssignWorkFlow2C() throws InterruptedException{
+	
+	EmployeesSection1.click();
+	Thread.sleep(1000);
+	AddEmployee.click();
+	Thread.sleep(1000);
+	EmployeeFirstName.sendKeys("AssignWorkFlow");
+	Thread.sleep(1000);
+	EmployeeLastName.sendKeys("Test");
+	Thread.sleep(1000);
+	EmployeeJobTitle.sendKeys("JobTitle");
+	EmployeeManagerName.sendKeys("ManagerName");
+	EmployeeHiredDate.sendKeys("08/02/2018");
+	EmployeeAnnualPay.sendKeys("12345");
+
+	EmployeeSave.click();
+	Thread.sleep(1000);
+	QuickSearchEnter.sendKeys("AssignWorkFlow");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	Thread.sleep(2000);
+	EmployeeProfile.click();
+    Thread.sleep(1000);
+	ButtonWorkFlow.click();
+	VerifyAssignTask_WorkFlow.click();
+	
+	
+	
+
+	
+	
+
+}
+
+
+
+
 
 
 public void Object_CalculationField() throws InterruptedException{

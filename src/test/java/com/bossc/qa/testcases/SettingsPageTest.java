@@ -42,23 +42,25 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-/*
-		 @Test(priority=1)
+///*
+		 @Test(priority=18)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
 			settings.CreateNewStaticField();
 			
 			
-		}*/
-	/*
-		@Test(priority=2)
+		}
+		//*/
+	///*
+		@Test(priority=19)
 		public void VerifyNewListField() throws InterruptedException{
 		
 			settings.CreateNewListField();
 			
 			
-		}*/
-		/*
+		}
+		//*/
+		///*
 		@DataProvider(name="ConstantData")
 		String [][] getData() throws IOException
 		{
@@ -81,21 +83,23 @@ public class SettingsPageTest extends TestBase{
 		}
 		
 		
-		@Test(priority=3,dataProvider="ConstantData")
+		@Test(priority=20,dataProvider="ConstantData")
 		public void VerifyNewConstantField(String ConstantName, String ConstantDisplayName, String Value) throws InterruptedException{
 			
 			settings.CreateNewConstantField(ConstantName,ConstantDisplayName,Value);
 			
 			
-		}*/
-		/*
-		@Test(priority=4)
+		}
+		//*/
+		///*
+		@Test(priority=21)
 		public void VerifyNewCalculationField() throws InterruptedException{
 			
 			settings.CreateNewCalculationField();
 			
 			
-		}*/
+		}
+		//*/
 		
 		
 		// ar
@@ -108,8 +112,8 @@ public class SettingsPageTest extends TestBase{
 			
 		//}
 		
-	/*	
-		@Test(priority=6)
+	///*	
+		@Test(priority=22)
 		public void VerifyNewDocument() throws InterruptedException{
 		
 		settings.CretaeNewDocument();
@@ -117,10 +121,10 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-*/
+//*/
 		
-	/*
-		@Test(priority=7)
+	///*
+		@Test(priority=23)
 		public void VerifyEmailService1() throws InterruptedException{
 		
 		 settings.EmailService1();
@@ -128,9 +132,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
-/*
-		@Test(priority=8)
+	//*/
+///*
+		@Test(priority=24)
 		public void VerifyEmailService2() throws InterruptedException, IOException{
 		
 		String EmailMessage = settings.EmailService2();
@@ -140,188 +144,37 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-		*/
-/*
-		@Test(priority=9)
-		public void VerifyEventCreationEnableAccount() throws InterruptedException, IOException{
+		//*/
+///*
+		@Test(priority=25)
+		public void VerifyEventCreationEnableAccountF() throws InterruptedException, IOException{
 		
-		 settings.EnableAccount1();
+		 settings.EnableAccount1F();
 		
 		
 	
 			
 		}
 		
-	*/
+	//*/
 		
-/*
-		@Test(priority=9,dependsOnMethods={ "VerifyEventCreationEnableAccount" })
-		public void VerifyEventPerformanceEnableAccount() throws InterruptedException, IOException{
+///*
+		@Test(priority=26,dependsOnMethods={ "VerifyEventCreationEnableAccountF" })
+		public void VerifyEventPerformanceEnableAccountF() throws InterruptedException, IOException{
 		
-		String EnableAccountResult = settings.EnableAccount2();
+		String EnableAccountResult = settings.EnableAccount2F();
 		assertEquals(EnableAccountResult,"true");
 		
 		
 	
 			
 		}
-	*/	
-		/*
-				@Test(priority=10)
-				public void VerifyEventCreationDisableAccount() throws InterruptedException, IOException{
-				
-				 settings.DisableAccount1();
-				
-				
-			
-					
-				}
-				
-			*/
-				
-		/*
-				@Test(priority=11,dependsOnMethods={ "VerifyEventCreationDisableAccount" })
-				public void VerifyEventPerformanceDisableAccount() throws InterruptedException, IOException{
-				
-				String EnableDisableResult = settings.DisableAccount2();
-				assertEquals(EnableDisableResult,"false");
-				
-				
-			
-					
-				}
-			*/
-		
-				/*
-				@Test(priority=12)
-				public void VerifyEventCreationGrantMobile() throws InterruptedException, IOException{
-				
-				 settings.GrantMobile1();
-				
-				
-			
-					
-				}
-				
-			*/
-				
-		/*
-				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationGrantMobile" })
-				public void VerifyEventPerformanceGrantMobile() throws InterruptedException, IOException{
-				
-				String GrantMobileResult = settings.GrantMobile2();
-				assertEquals(GrantMobileResult,"true");
-				
-				
-			
-					
-				}
-			*/
-				/*
-				@Test(priority=12)
-				public void VerifyEventCreationRevokeMobile() throws InterruptedException, IOException{
-				
-				 settings.RevokeMobile1();
-				
-				
-			
-					
-				}
-				
-			*/
-				
-		/*
-				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationRevokeMobile" })
-				public void VerifyEventPerformanceRevokeMobile() throws InterruptedException, IOException{
-				
-				String GrantMobileResult = settings.RevokeMobile2();
-				assertEquals(GrantMobileResult,"false");
-				
-				
-			
-					
-				}
-			*/
-				/*
-				@Test(priority=12)
-				public void VerifyEventCreationHealthObject() throws InterruptedException, IOException{
-				
-				 settings.CreateHealthObject1();
-				
-				
-			
-					
-				}
-				
-			*/
-				
-		/*
-				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationHealthObject" })
-				public void VerifyEventPerformanceCreateHealthObject() throws InterruptedException, IOException{
-				
-				 settings.CreateHealthObject2();
-			
-				
-				
-			
-					
-				}
-			*/
-		/*
-		@Test(priority=12)
-		public void VerifyEventTerminateHealthObject() throws InterruptedException, IOException{
-		
-		 settings.TerminateHealthObject1();
-		
-		
-	
-			
-		}
-		
-	*/
-		
-/*
-		@Test//(priority=13,dependsOnMethods={ "VerifyEventTerminateHealthObject" })
-		public void VerifyEventPerformanceTerminateHealthObject() throws InterruptedException, IOException{
-		
-		 settings.TerminateHealthObject2();
-	
-		
-		
-	
-			
-		}
-	*/
-		/*
-		@Test(priority=12)
-		public void VerifyEventCreationFieldUpdate() throws InterruptedException, IOException{
-		
-		 settings.FieldUpdate1();
-		
-		
-	
-			
-		}
-		
-	*/
-		
-/*
-		@Test(priority=13,dependsOnMethods={ "VerifyEventCreationFieldUpdate" })
-		public void VerifyEventPerformanceFieldUpdate() throws InterruptedException, IOException{
-		
-		String resultFieldUpdate =  settings.FieldUpdate2();
-	    assertEquals(resultFieldUpdate,"Lord");
-		
-		
-	
-			
-		}
-	*/
+	//*/	
 		///*
-				@Test(priority=12)
-				public void VerifyEventCreationDependentFieldUpdate() throws InterruptedException, IOException{
+				@Test(priority=27)
+				public void VerifyEventCreationDisableAccountF() throws InterruptedException, IOException{
 				
-				 settings.DependentFieldUpdate1();
+				 settings.DisableAccount1F();
 				
 				
 			
@@ -331,7 +184,161 @@ public class SettingsPageTest extends TestBase{
 			//*/
 				
 		///*
-				@Test(priority=13,dependsOnMethods={ "VerifyEventCreationDependentFieldUpdate" })
+				@Test(priority=28,dependsOnMethods={ "VerifyEventCreationDisableAccountF" })
+				public void VerifyEventPerformanceDisableAccountF() throws InterruptedException, IOException{
+				
+				String EnableDisableResult = settings.DisableAccount2F();
+				assertEquals(EnableDisableResult,"false");
+				
+				
+			
+					
+				}
+			//*/
+		
+			//	/*
+				@Test(priority=29)
+				public void VerifyEventCreationGrantMobileF() throws InterruptedException, IOException{
+				
+				 settings.GrantMobile1F();
+				
+				
+			
+					
+				}
+				
+			//*/
+				
+		///*
+				@Test(priority=30,dependsOnMethods={ "VerifyEventCreationGrantMobileF" })
+				public void VerifyEventPerformanceGrantMobileF() throws InterruptedException, IOException{
+				
+				String GrantMobileResult = settings.GrantMobile2F();
+				assertEquals(GrantMobileResult,"true");
+				
+				
+			
+					
+				}
+			//*/
+				///*
+				@Test(priority=31)
+				public void VerifyEventCreationRevokeMobileF() throws InterruptedException, IOException{
+				
+				 settings.RevokeMobile1F();
+				
+				
+			
+					
+				}
+				
+			//*/
+				
+		///*
+				@Test(priority=32,dependsOnMethods={ "VerifyEventCreationRevokeMobileF" })
+				public void VerifyEventPerformanceRevokeMobileF() throws InterruptedException, IOException{
+				
+				String GrantMobileResult = settings.RevokeMobile2F();
+				assertEquals(GrantMobileResult,"false");
+				
+				
+			
+					
+				}
+			//*/
+				///*
+				@Test(priority=33)
+				public void VerifyEventCreationHealthObjectF() throws InterruptedException, IOException{
+				
+				 settings.CreateHealthObject1F();
+				
+				
+			
+					
+				}
+				
+			//*/
+				
+		///*
+				@Test(priority=34,dependsOnMethods={ "VerifyEventCreationHealthObjectF" })
+				public void VerifyEventPerformanceCreateHealthObjectF() throws InterruptedException, IOException{
+				
+				 settings.CreateHealthObject2F();
+			
+				
+				
+			
+					
+				}
+			//*/
+		///*
+		@Test(priority=35)
+		public void VerifyEventTerminateHealthObjectF() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject1F();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=36,dependsOnMethods={ "VerifyEventTerminateHealthObjectF" })
+		public void VerifyEventPerformanceTerminateHealthObjectF() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject2F();
+	
+		
+		
+	
+			
+		}
+	//*/
+		///*
+		@Test(priority=37)
+		public void VerifyEventCreationFieldUpdateF() throws InterruptedException, IOException{
+		
+		 settings.FieldUpdate1F();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=38,dependsOnMethods={ "VerifyEventCreationFieldUpdateF" })
+		public void VerifyEventPerformanceFieldUpdateF() throws InterruptedException, IOException{
+		
+		String resultFieldUpdate =  settings.FieldUpdate2F();
+	    assertEquals(resultFieldUpdate,"Lord");
+		
+		
+	
+			
+		}
+	//*/
+		///*
+				@Test(priority=39)
+				public void VerifyEventCreationDependentFieldUpdate() throws InterruptedException, IOException{
+				
+				 settings.DependentFieldUpdate1();
+				
+				
+			
+				}
+				
+			//*/
+		
+		
+		
+		
+				
+		///*
+				@Test(priority=40,dependsOnMethods={ "VerifyEventCreationDependentFieldUpdate" })
 				public void VerifyEventPerformanceDependentFieldUpdate() throws InterruptedException, IOException{
 				
 				String resultDependentFieldUpdate =  settings.DependentFieldUpdate2();
@@ -342,15 +349,249 @@ public class SettingsPageTest extends TestBase{
 					
 				}
 			//*/
-				
+		///*
+		@Test(priority=41)
+		public void VerifyEventAssignWorkFlowF() throws InterruptedException, IOException{
+		
+		 settings.AssignWorkFlow1F();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=42,dependsOnMethods={ "VerifyEventAssignWorkFlowF" })
+		public void VerifyEventPerformanceAssignWorkFlowF() throws InterruptedException, IOException{
+		
+		 settings.AssignWorkFlow2F();
+	
+		
+		
+	
+			
+		}
+	//*/
+		
+		
+		
+		///*
+		@Test(priority=43)
+		public void VerifyEventCreationEnableAccountC() throws InterruptedException, IOException{
+		
+		 settings.EnableAccount1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=44,dependsOnMethods={ "VerifyEventCreationEnableAccountC" })
+		public void VerifyEventPerformanceEnableAccountC() throws InterruptedException, IOException{
+		
+		String EnableAccountResult = settings.EnableAccount2C();
+		assertEquals(EnableAccountResult,"true");
+		
+		
+	
+			
+		}
+	//*/	
+		///*
+		@Test(priority=45)
+		public void VerifyEventCreationDisableAccountC() throws InterruptedException, IOException{
+		
+		 settings.DisableAccount1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=46,dependsOnMethods={ "VerifyEventCreationDisableAccountC" })
+		public void VerifyEventPerformanceDisableAccountC() throws InterruptedException, IOException{
+		
+		String EnableDisableResult = settings.DisableAccount2C();
+		assertEquals(EnableDisableResult,"false");
+		
+		
+	
+			
+		}
+	//*/
+		///*
+		@Test(priority=47)
+		public void VerifyEventCreationGrantMobileC() throws InterruptedException, IOException{
+		
+		 settings.GrantMobile1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=48,dependsOnMethods={ "VerifyEventCreationGrantMobileC" })
+		public void VerifyEventPerformanceGrantMobileC() throws InterruptedException, IOException{
+		
+		String GrantMobileResult = settings.GrantMobile2C();
+		assertEquals(GrantMobileResult,"true");
+		
+		
+	
+			
+		}
+//*/
+		
+		///*
+		@Test(priority=49)
+		public void VerifyEventCreationRevokeMobileC() throws InterruptedException, IOException{
+		
+		 settings.RevokeMobile1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=50,dependsOnMethods={ "VerifyEventCreationRevokeMobileC" })
+		public void VerifyEventPerformanceRevokeMobileC() throws InterruptedException, IOException{
+		
+		String GrantMobileResult = settings.RevokeMobile2C();
+		assertEquals(GrantMobileResult,"false");
+		
+		
+	
+			
+		}
+	//*/
+		///*
+		@Test(priority=51)
+		public void VerifyEventCreationHealthObjectC() throws InterruptedException, IOException{
+		
+		 settings.CreateHealthObject1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=52,dependsOnMethods={ "VerifyEventCreationHealthObjectC" })
+		public void VerifyEventPerformanceCreateHealthObjectC() throws InterruptedException, IOException{
+		
+		 settings.CreateHealthObject2C();
+	
+		
+		
+	
+			
+		}
+	//*/
+		
+		///*
+		@Test(priority=53)
+		public void VerifyEventTerminateHealthObjectC() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=54,dependsOnMethods={ "VerifyEventTerminateHealthObjectC" })
+		public void VerifyEventPerformanceTerminateHealthObjectC() throws InterruptedException, IOException{
+		
+		 settings.TerminateHealthObject2C();
+	
+		
+		
+	
+			
+		}
+	//*/
+		///*
+		@Test(priority=55)
+		public void VerifyEventCreationFieldUpdateC() throws InterruptedException, IOException{
+		
+		 settings.FieldUpdate1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=56,dependsOnMethods={ "VerifyEventCreationFieldUpdateC" })
+		public void VerifyEventPerformanceFieldUpdateC() throws InterruptedException, IOException{
+		
+		String resultFieldUpdate =  settings.FieldUpdate2C();
+	    assertEquals(resultFieldUpdate,"FieldUpdate");
+		
+		
+	
+			
+		}
+	//*/
+		
+		///*
+		@Test(priority=57)
+		public void VerifyEventAssignWorkFlowC() throws InterruptedException, IOException{
+		
+		 settings.AssignWorkFlow1C();
+		
+		
+	
+			
+		}
+		
+	//*/
+		
+///*
+		@Test(priority=58,dependsOnMethods={ "VerifyEventAssignWorkFlowC" })
+		public void VerifyEventPerformanceAssignWorkFlowC() throws InterruptedException, IOException{
+		
+		 settings.AssignWorkFlow2C();
+	
+		
+		
+	
+			
+		}
+	//*/
+		
+	
 		
 		
 		
 		
 		
 		
-	/*
-	 @Test(priority=9)
+		
+		
+	///*
+	 @Test(priority=59)
 	 
 		public void VerifyNewObjectCalculationFields() throws InterruptedException{
 		
@@ -359,7 +600,7 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 	 
-		*/
+		//*/
 	
 	  /* 
 	 @AfterMethod

@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68420" started-at="2019-02-07T23:43:35Z" finished-at="2019-02-07T23:44:43Z">
+  <suite name="Default suite" duration-ms="62629" started-at="2019-02-08T21:59:41Z" finished-at="2019-02-08T22:00:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68420" started-at="2019-02-07T23:43:35Z" finished-at="2019-02-07T23:44:43Z">
+    <test name="Default test" duration-ms="62629" started-at="2019-02-08T21:59:41Z" finished-at="2019-02-08T22:00:43Z">
       <class name="com.bossc.qa.testcases.SettingsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="15747" started-at="2019-02-07T18:43:35Z" finished-at="2019-02-07T18:43:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="14919" started-at="2019-02-08T16:59:41Z" finished-at="2019-02-08T16:59:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="VerifyEventCreationDependentFieldUpdate()[pri:12, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="VerifyEventCreationDependentFieldUpdate" duration-ms="24943" started-at="2019-02-07T18:43:51Z" finished-at="2019-02-07T18:44:16Z">
+        <test-method status="PASS" signature="VerifyEventAssignWorkFlowC()[pri:12, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="VerifyEventAssignWorkFlowC" duration-ms="15730" started-at="2019-02-08T16:59:55Z" finished-at="2019-02-08T17:00:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyEventCreationDependentFieldUpdate -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="15288" started-at="2019-02-07T18:44:16Z" finished-at="2019-02-07T18:44:31Z">
+        </test-method> <!-- VerifyEventAssignWorkFlowC -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="14409" started-at="2019-02-08T17:00:11Z" finished-at="2019-02-08T17:00:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="VerifyEventPerformanceDependentFieldUpdate()[pri:13, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="VerifyEventPerformanceDependentFieldUpdate" duration-ms="12422" started-at="2019-02-07T18:44:31Z" depends-on-methods="com.bossc.qa.testcases.SettingsPageTest.VerifyEventCreationDependentFieldUpdate" finished-at="2019-02-07T18:44:43Z">
+        <test-method status="PASS" signature="VerifyEventPerformanceAssignWorkFlowF()[pri:13, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="VerifyEventPerformanceAssignWorkFlowF" duration-ms="17551" started-at="2019-02-08T17:00:26Z" depends-on-methods="com.bossc.qa.testcases.SettingsPageTest.VerifyEventAssignWorkFlowC" finished-at="2019-02-08T17:00:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyEventPerformanceDependentFieldUpdate -->
+        </test-method> <!-- VerifyEventPerformanceAssignWorkFlowF -->
       </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
