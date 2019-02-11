@@ -51,6 +51,8 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-cell[text()=' Emergency Days ']")
 	WebElement VerifyAssignTask_WorkFlow;
 	
+	
+	
 // Settings
 	
 	
@@ -183,31 +185,41 @@ public class Settings extends TestBase{
 	WebElement Report;
 	
 
-	@FindBy(xpath="//button[@class='btn bossc-btn right-panel-btn']")
+	@FindBy(xpath="//button[text()=' CREATE REPORT ']")
 	WebElement CreateReport;
 
-	@FindBy(xpath="//mat-select[@id='mat-select-2']")
+	@FindBy(xpath="//mat-select[@id='mat-select-0']")
 	WebElement ReportTypeSelect;
 
-	@FindBy(xpath="//span[@class='mat-option-text' and text()='Field Delimited (DEL)']")
+	@FindBy(xpath="//span[text()=' Comma Separated Values (CSV)']")
 	WebElement ReportTypeOption;
 
-	@FindBy(xpath="//input[@placeholder='enter report name...']")
+	@FindBy(xpath="//input[@id='mat-input-2']")
 	WebElement ReportName;
 	
-	@FindBy(xpath="//mat-select[@id='mat-select-0']")
+	@FindBy(xpath="//mat-select[@id='mat-select-1']")
 	WebElement ReportServiceSelect;
 
 	@FindBy(xpath="//span[@class='mat-option-text' and text()='Payroll']")
 	WebElement ReportServiceOption;
 	
-     @FindBy(xpath="//mat-select[@id='mat-select-1']")
+     @FindBy(xpath="//mat-select[@id='mat-select-2']")
 	WebElement ReportCategorySelect;
 
-	@FindBy(xpath="//span[@class='mat-option-text' and text()='Carrier Reports']")
+	@FindBy(xpath="//span[text()='Carrier Reports']")
 	WebElement ReportCategoryOption;
+	
+	@FindBy(xpath="//input[@id='mat-input-4']")
+	WebElement CSVReportDelimiter;
+	
+	@FindBy(xpath="//mat-select[@id='mat-select-3']")
+	WebElement Include_Exclude_Column_Header_Select;
 
-	@FindBy(xpath="//textarea[@placeholder='enter report description...']")
+	@FindBy(xpath="//span[text()=' Include Column Headers ']")
+	WebElement Include_Column_Header_Option;
+	
+
+	@FindBy(xpath="//input[@id='mat-input-3']")
 	WebElement ReportDescription;
 
 	@FindBy(xpath="//button[@class='btn bossc-btn']")
@@ -215,6 +227,30 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//input[@id='mat-input-2']")
 	WebElement ReportSaveId;
+	
+	@FindBy(xpath="//mat-select[@id='selField']")
+	WebElement Add_Fields_TO_Report_Select;
+	
+	@FindBy(xpath="//span[text()='First Name (PeopleFirstName)']")
+	WebElement Add_First_Name_To_Report_Option;
+	
+	@FindBy(xpath="//span[text()='Last Name (PeopleLastName)']")
+	WebElement Add_Last_Name_To_Report_Option;
+	
+	@FindBy(xpath="//span[text()='Date of Birth (PeopleDOB)']")
+	WebElement Add__DateOfBirth_To_Report_Option;
+	
+	@FindBy(xpath="//span[text()='Age (PeopleAge)']")
+	WebElement Add_Age_To_Report_Option;
+	
+	@FindBy(xpath="//span[text()='ConstantTest08 (ConstantTest08)']")
+	WebElement Add_ConstantTest08_Option;
+	
+	@FindBy(xpath="//button[@mattooltip='Save Report']")
+	WebElement Save_After_Add_Field;
+	
+	@FindBy(xpath="//div[text()='Back']")
+	WebElement Back;
 	
 // Documents
 	
@@ -578,7 +614,7 @@ public class Settings extends TestBase{
 	@FindBy(xpath="(//div[text()=' Employee Profile '])[2]")
 	WebElement EmployeeEditedMakeSure;
 	
-    @FindBy(xpath="//button[@type='button']")
+    @FindBy(xpath="//mat-cell[text()=' TestEmailService ']")
 	WebElement EmailAction;
 	
 	@FindBy(xpath="//div[text()='Automation']")
@@ -649,7 +685,7 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//mat-select[@id='mat-select-3']")
 	WebElement Objects_Fields_Target_Select;
 	
-	@FindBy(xpath="//span[text()=' SELF ']")
+	@FindBy(xpath="//span[text()=' Primary ']")
 	WebElement Objects_Fields_Target_Option;
 	
 	@FindBy(xpath="//mat-radio-button[@id='mat-radio-2']")
@@ -809,16 +845,46 @@ public void CreateNewReport() throws InterruptedException{
 	ReportTypeSelect.click();
 	Thread.sleep(2000);
 	ReportTypeOption.click();
-	ReportName.sendKeys("AutomatedReport");
-	Thread.sleep(2000);
-	ReportServiceSelect.click();
-	ReportServiceOption.click();
-	Thread.sleep(2000);
+	ReportName.sendKeys("eee");
+	Thread.sleep(1000);
+	//ReportServiceSelect.click();
+	//Thread.sleep(1000);
+	//ReportServiceOption.click();
+	//Thread.sleep(2000);
 	ReportCategorySelect.click();
+	Thread.sleep(1000);
 	ReportCategoryOption.click();
+	CSVReportDelimiter.sendKeys("|");
+	Include_Exclude_Column_Header_Select.click();
+	Include_Column_Header_Option.click();
 	ReportDescription.sendKeys("Testing Purpose");
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	ReportSave.click();
+	Thread.sleep(2000);
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_First_Name_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_Last_Name_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add__DateOfBirth_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_Age_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_ConstantTest08_Option.click();
+	Thread.sleep(1000);
+	Save_After_Add_Field.click();
+	Thread.sleep(4000);
+	Back.click();
+	QuickSearchEnter.sendKeys("eee");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	
 	
 	
 	
@@ -888,7 +954,7 @@ public void EmailService1() throws InterruptedException{
 	SettingsSection.click();
 	Automation.click();
 	CreateNewAction.click();
-	EmailActionName.sendKeys("AutomationAction");
+	EmailActionName.sendKeys("AutomationSendEmailAction");
 	EmailActionDescription.sendKeys("AutomationActionEmailPurpose");
 	EmailActionTypeSelect.click();
 	Thread.sleep(1000);
@@ -1398,6 +1464,7 @@ public void FieldUpdate1F() throws InterruptedException{
 	Thread.sleep(1000);
 	ActionTypeFieldUpdateOption.click();
 	FieldUpdateTargetSelect.click();
+	Thread.sleep(1000);
 	FieldUpdateTargetOption.click();
 	FieldUpdateSourceSelect.click();
 	Thread.sleep(1000);
@@ -1729,7 +1796,7 @@ public void DisableAccount1C() throws InterruptedException{
 public String DisableAccount2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	AddEmployee.click();
 
 	EmployeeFirstName.sendKeys("DisableAccount");
@@ -1795,6 +1862,7 @@ public void GrantMobile1C() throws InterruptedException{
 public String GrantMobile2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
+	Thread.sleep(2000);
 	AddEmployee.click();
 	EmployeeFirstName.sendKeys("GrantMobile");
 	Thread.sleep(1000);
@@ -1862,6 +1930,7 @@ public String GrantMobile2C() throws InterruptedException{
 public String RevokeMobile2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
+	Thread.sleep(2000);
 	AddEmployee.click();
 	EmployeeFirstName.sendKeys("RevokeMobile");
 	Thread.sleep(1000);
@@ -1928,7 +1997,7 @@ public void CreateHealthObject2C() throws InterruptedException{
 
 
 	EmployeesSection1.click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	AddEmployee.click();
 	EmployeeFirstName.sendKeys("CreateObject");
 	Thread.sleep(1000);
@@ -1956,69 +2025,7 @@ public void CreateHealthObject2C() throws InterruptedException{
 }
 
 
-public void TerminateHealthObject1C() throws InterruptedException{
-	
-	SettingsSection.click();
-	Automation.click();
-	Thread.sleep(2000);
-	EventClick.click();
-	QuickSearchEnter.sendKeys("Automation");
-	Thread.sleep(2000);
-	QuickSearchClick.click();
-	DeleteEvent.click();
-	DeleteEventForSure.click();
-	Thread.sleep(1000);
 
-    CreateNewEvent.click();
-	EventNameC.sendKeys("AutomationCreateRecordEvent");
-	EventStatus.click();
-	TriggerIntiatorsSelectC.click();
-	TriggerIntiatorsOptionC.click();
-	TriggerPersonTypeSelectC.click();
-	TriggerPersonTypeOption.click();
-	je.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
-	PerformActionSelectC.click();
-	Thread.sleep(1000);
-	PerformActionTerminateObjectOption.click();
-	Thread.sleep(5000);
-	je1.executeScript("arguments[0].scrollIntoView(true);",PerformActionSelectC);
-	AddDescription.sendKeys("AutomationTerminateObject");
-	Thread.sleep(2000);
-	SaveAsNewEvent.click();
-
-	
-	
-}
-public void TerminateHealthObject2C() throws InterruptedException{
-	
-	EmployeesSection1.click();
-	Thread.sleep(1000);
-	AddEmployee.click();
-	EmployeeFirstName.sendKeys("TerminateObject");
-	Thread.sleep(1000);
-	EmployeeLastName.sendKeys("Test");
-	Thread.sleep(1000);
-	EmployeeJobTitle.sendKeys("JobTitle");
-	EmployeeManagerName.sendKeys("ManagerName");
-	EmployeeHiredDate.sendKeys("08/02/2018");
-	EmployeeAnnualPay.sendKeys("12345");
-
-	EmployeeSave.click();
-	Thread.sleep(1000);
-	QuickSearchEnter.sendKeys("TerminateObject");
-	Thread.sleep(5000);
-	QuickSearchClick.click();
-	ResultSearchClick.click();
-	Thread.sleep(2000);
-	Employee_Service.click();
-	Dimension arpan = Employee_CreateObject_MakeSure.getSize();
-	System.out.println(arpan);
-	
-
-	
-
-	
-}
 
 public void FieldUpdate1C() throws InterruptedException{
 	
@@ -2056,7 +2063,7 @@ public void FieldUpdate1C() throws InterruptedException{
 public String FieldUpdate2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	AddEmployee.click();
 	Thread.sleep(1000);
 	EmployeeFirstName.sendKeys("FieldUpdate");
@@ -2077,7 +2084,7 @@ public String FieldUpdate2C() throws InterruptedException{
 	Thread.sleep(2000);
 	EmployeeProfile.click();
     Thread.sleep(1000);
-	return EmployeeEditedValue.getAttribute("ng-reflect-model");
+	return EmployeeEditedValueF.getAttribute("ng-reflect-model");
 
 	
 
@@ -2125,7 +2132,7 @@ public void AssignWorkFlow1C() throws InterruptedException{
 public void AssignWorkFlow2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	AddEmployee.click();
 	Thread.sleep(1000);
 	EmployeeFirstName.sendKeys("AssignWorkFlow");

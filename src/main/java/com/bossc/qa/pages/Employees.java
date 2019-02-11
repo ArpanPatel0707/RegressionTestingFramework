@@ -160,7 +160,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[text()=' Assign ']")
 	WebElement ClickAssignTask_WorkFlow;
 	
-	@FindBy(xpath="//mat-table/mat-row/mat-cell[1]")
+	@FindBy(xpath="//mat-cell[text()=' Sick Days ']")
 	WebElement VerifyAssignTask_WorkFlow;
 	
 	
@@ -243,7 +243,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Save Profile']")
 	WebElement DependentEditSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-5']")
+	@FindBy(xpath="//input[@id='mat-input-6']")
 	WebElement DependentEditedValue;
 	
 	@FindBy(xpath="(//div[text()=' Personal Details '])[2]")
@@ -407,7 +407,7 @@ public class Employees extends TestBase{
 	
 		EmployeeSave.click();
 		Thread.sleep(2000);
-		QuickSearchEnter.sendKeys("Lord");
+		QuickSearchEnter.sendKeys(FirstName);
 		Thread.sleep(2000);
 		QuickSearchClick.click();
 		

@@ -30,7 +30,7 @@ public class DashBoardTest extends TestBase {
 
 	
 ///*
-	@Test(priority=1)
+	@Test(priority=2)
 	public void VerifyCreateReminderTest() throws InterruptedException {
 	
 		boolean flag = Dashboard.CreateReminder();

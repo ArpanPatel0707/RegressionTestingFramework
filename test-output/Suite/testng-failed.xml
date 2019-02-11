@@ -9,10 +9,24 @@
       <class name="com.bossc.qa.testcases.EmployeePageTest">
         <methods>
           <include name="VerifyRunWorkFlow"/>
+          <include name="VerifyEditDependent"/>
           <include name="setUp"/>
+          <include name="VerifyAssignTask"/>
           <include name="VerifyAssignWorkFlow"/>
+          <include name="VerifyRunTask"/>
         </methods>
       </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
+      <class name="com.bossc.qa.testcases.SettingsPageTest">
+        <methods>
+          <include name="VerifyNewStaticField"/>
+          <include name="VerifyEventCreationFieldUpdateC"/>
+          <include name="VerifyEmailService2"/>
+          <include name="VerifyEmailService1"/>
+          <include name="VerifyEventPerformanceFieldUpdateC"/>
+          <include name="VerifyNewObjectCalculationFields"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </classes>
   </test> <!-- BOSSC Web TestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->
