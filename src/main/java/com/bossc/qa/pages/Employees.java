@@ -383,7 +383,44 @@ public class Employees extends TestBase{
     @FindBy(xpath="//button[text()='Upload & Quit']")
 	WebElement Employee_Upload_Quit;
    
+    // Audit and Account
     
+    @FindBy(xpath="//button[@class='btn small-icon-btn']")
+	WebElement AccountAuditClick;
+    
+    @FindBy(xpath="//button[text()='Account']")
+	WebElement AccountClick;
+	
+	@FindBy(xpath="//button[text()='Audit']")
+	WebElement AuditClick;
+    
+	@FindBy(xpath="(//mat-expansion-panel-header[@role='button'])[2]")
+	WebElement AuditEntries;
+	
+	@FindBy(xpath="//div[text()='Last Name']")
+	WebElement AuditEntriesMakeSure;
+	
+	@FindBy(xpath="//input[@ng-reflect-placeholder='Username']")
+	WebElement AccountUserName;
+	
+	@FindBy(xpath="//input[@ng-reflect-placeholder='Password']")
+	WebElement AccountPassword;
+	
+	@FindBy(xpath="//input[@ng-reflect-placeholder='Repeat Password']")
+	WebElement AccountRepeatPassword;
+	
+	@FindBy(xpath="//div[text()='Password is too weak']")
+	WebElement AccountPasswordRequirementMakeSure;
+	
+	@FindBy(xpath="//div[text()='Saved']")
+	WebElement AccountUserNamePasswordSaveMakeSure;
+	
+	@FindBy(xpath="//button[@title='Save']")
+	WebElement AccountPasswordSave;
+	
+    
+	
+	
     
 
 	//Initializing the Page Objects:
@@ -816,6 +853,73 @@ public String Edit_Column()throws InterruptedException{
 	
 	
 }
+
+public boolean LoggedAudit()throws InterruptedException{
+	QuickSearchEnter.sendKeys("Lord");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	EmployeeSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AuditClick.click();
+	AuditEntries.click();
+	
+	
+	return AuditEntriesMakeSure.isDisplayed();
+	
+	
+	
+	
+	}
+
+public boolean AccountPasswordRequirement()throws InterruptedException{
+	QuickSearchEnter.sendKeys("Lord");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	EmployeeSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	AccountUserName.sendKeys("AutomationTest");
+	AccountPassword.sendKeys("Test123");
+	AccountRepeatPassword.sendKeys("Test123");
+	
+   AccountPasswordSave.click();
+	
+
+	
+	
+	return AccountPasswordRequirementMakeSure.isDisplayed();
+	
+	
+	
+	
+	}
+
+
+public boolean AccountUserNamePasswordSave()throws InterruptedException{
+	QuickSearchEnter.sendKeys("Lord");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	EmployeeSearchClick.click();
+	Thread.sleep(2000);
+	AccountAuditClick.click();
+	AccountClick.click();
+	AccountUserName.sendKeys("TestAutomation");
+	AccountPassword.sendKeys("AUDIa4q5@");
+	AccountRepeatPassword.sendKeys("AUDIa4q5@");
+	
+   AccountPasswordSave.click();
+	
+
+	
+	
+	return AccountUserNamePasswordSaveMakeSure.isDisplayed();
+	
+	
+	
+	
+	}
 
 
 

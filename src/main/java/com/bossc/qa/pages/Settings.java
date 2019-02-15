@@ -2,6 +2,7 @@ package com.bossc.qa.pages;
 
 import java.awt.Window;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -162,6 +163,9 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//button[@class='add-mat-mini-fab mat-mini-fab mat-accent ng-star-inserted']")
 	WebElement FieldSave;
 	
+	@FindBy(xpath="(//button[@class='add-mat-mini-fab mat-mini-fab mat-accent ng-star-inserted'])[2]")
+	WebElement FieldDelete;
+	
 	@FindBy(xpath="//input[@id='mat-input-0']")
 	WebElement FieldFindTab;
 	
@@ -177,6 +181,8 @@ public class Settings extends TestBase{
 	@FindBy(xpath="//div[@class='mat-list-item-content' and text()=' CalculationTest08 ']")
 	WebElement FieldFindCalculationResult;
 	
+	@FindBy(xpath="//div[@class='mat-list-item-content' and text()=' BankAccountNo ']")
+	WebElement FindDeleteDependedFieldResult;
 	
 	
 	// Reports
@@ -859,6 +865,22 @@ public void CreateNewCalculationField() throws InterruptedException{
 	FieldFindTab.sendKeys("CalculationTest08");
 	Thread.sleep(2000);
 	FieldFindCalculationResult.click();
+	
+}
+
+public void DeleteDependedField() throws InterruptedException{
+	
+	Fields.click();
+	FieldManager.click();
+	
+	FieldFindTab.sendKeys("BankAccountNo");
+	Thread.sleep(2000);
+	FindDeleteDependedFieldResult.click();
+	FieldDelete.click();
+	Alert alert = driver.switchTo()
+	.alert();
+	
+	alert.accept();
 	
 }
 

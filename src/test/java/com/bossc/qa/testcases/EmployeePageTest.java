@@ -63,7 +63,7 @@ import com.bossc.qa.util.TestUtil;
 				}
 			return logindata;
 			}
-			///*
+			//*
 			
 			@Test(priority=3,dataProvider="LoginData")
 			public void VerifyNewEmployee(String FirstName, String LastName,String JobTitle, String ManagerName,String HiredDate,String AnnualPay) throws InterruptedException, IOException
@@ -77,26 +77,26 @@ import com.bossc.qa.util.TestUtil;
 		//*/
 			
 			
-			/*
+			//*
 			@Test(priority=4)
 			public void VerifyNewDepdent() throws InterruptedException{
 		    employees.AddNewDependent();
 				
 
 			} 
-			*/
-			/*
+			//*/
+			//*
 			@Test(priority=5)
 			public void VerifyNewBeneficiary() throws InterruptedException{
 		    employees.AddNewBeneficiary();
 				
 
 			}
-			 */
+			// */
 			
 			
 			
-			/*		
+			///*		
 			@Test(priority=6)
 			public void VerifyAssignWorkFlow() throws InterruptedException {
 			
@@ -104,10 +104,10 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}
-			*/
+			//*/
 			
 			
-			/*
+			///*
 			@Test(priority=7,dependsOnMethods={ "VerifyAssignWorkFlow" })
 			public void VerifyRunWorkFlow() throws InterruptedException {
 			
@@ -115,8 +115,8 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}
-			*/
-			/*
+			//*/
+			///*
 		    @Test(priority=8)
 			public void VerifyAssignTask() throws InterruptedException {
 			
@@ -124,9 +124,9 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}
-			 */
+			// */
 			
-		  /*	
+		  ///*	
 			@Test(priority=9,dependsOnMethods={ "VerifyAssignTask" })
 			public void VerifyRunTask() throws InterruptedException {
 			
@@ -134,8 +134,8 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			}
-			*/
-			/*	
+			//*/
+			///*	
 			@Test(priority=10)
 			public void VerifyEditEmployee() throws InterruptedException {
 			
@@ -144,7 +144,7 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			} 
-			*/
+			//*/
 			
 		///*
 			@Test(priority=11)
@@ -156,7 +156,7 @@ import com.bossc.qa.util.TestUtil;
 				
 			} 
 		//*/
-		/*
+		//*
 			@Test(priority=12)
 			public void VerifyAddService() throws InterruptedException {
 			
@@ -164,8 +164,8 @@ import com.bossc.qa.util.TestUtil;
 				
 				
 			} 
-			*/
-			/*    
+			//*/
+			///*    
 			@Test(priority=23)
 			public void VerifyGenerate_Document() throws InterruptedException {
 			
@@ -174,9 +174,9 @@ import com.bossc.qa.util.TestUtil;
 				
 			}
 			 
-			*/
+			//*/
 			
-	/*
+	//*
 			//@Test(priority=14)
 			//public void VerifyUpload_Document() throws InterruptedException {
 			
@@ -185,13 +185,13 @@ import com.bossc.qa.util.TestUtil;
 				
 		//	}
 			
-			*/
+			//*/
 			
 			
 			
 			
 			
-		/*
+		///*
 			@Test(priority=15,dependsOnMethods={ "VerifyAddService" })
 			public void Edit_Service() throws InterruptedException {
 			
@@ -199,9 +199,9 @@ import com.bossc.qa.util.TestUtil;
 		       Assert.assertTrue(flag);
 				
 			} 
-			*/
+			//*/
 			
-			/*
+			///*
 			@Test(priority=16)
 			public void VerifyAddNotes() throws InterruptedException {
 			
@@ -209,10 +209,10 @@ import com.bossc.qa.util.TestUtil;
 				assertEquals(Add_Notes,"hi");
 				
 			} 
-			*/
+			//*/
 			
 			
-			/*
+			///*
 			@Test(priority=17)
 			public void VerifyEditColumn() throws InterruptedException {
 			
@@ -220,7 +220,7 @@ import com.bossc.qa.util.TestUtil;
 				assertEquals(Result_Employee_Edit,"January 1, 2019");
 				
 			} 
-			*/
+			//*/
 			 
 
 			
@@ -233,10 +233,47 @@ import com.bossc.qa.util.TestUtil;
 			//}
 			
 			
+			//*
+			
+			@Test(priority=17)
+			public void VerifyAccountPasswordRequirement() throws InterruptedException {
+			
+		
+			boolean flag = employees.AccountPasswordRequirement();
+		       Assert.assertTrue(flag);
+				
+			} 
+			
+			//*/
+			//*
+			
+			@Test(priority=17)
+			public void VerifyAccountUserNamePasswordSave() throws InterruptedException {
+			
+		
+			boolean flag = employees.AccountUserNamePasswordSave();
+		       Assert.assertTrue(flag);
+				
+			} 
+			
+			//*/
 			
 			
-			/*  
-			 
+			//*
+			@Test(priority=17)
+			public void VerifyLoggedAudit() throws InterruptedException {
+			
+			
+				boolean flag = employees.LoggedAudit();
+		       Assert.assertTrue(flag);
+				
+				
+			} 
+			//*/
+			
+		
+
+			/* 
 			 @AfterMethod
 			public void tearDown(){
 				driver.quit();
