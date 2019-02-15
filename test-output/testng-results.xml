@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47140" started-at="2019-02-11T23:35:17Z" finished-at="2019-02-11T23:36:04Z">
+  <suite name="Default suite" duration-ms="27312" started-at="2019-02-13T22:11:36Z" finished-at="2019-02-13T22:12:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47140" started-at="2019-02-11T23:35:17Z" finished-at="2019-02-11T23:36:04Z">
-      <class name="com.bossc.qa.testcases.SettingsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="16754" started-at="2019-02-11T18:35:17Z" finished-at="2019-02-11T18:35:34Z">
+    <test name="Default test" duration-ms="27312" started-at="2019-02-13T22:11:36Z" finished-at="2019-02-13T22:12:03Z">
+      <class name="com.bossc.qa.testcases.EmployeePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.bossc.qa.testcases.EmployeePageTest@77caeb3e]" name="setUp" is-config="true" duration-ms="16217" started-at="2019-02-13T17:11:36Z" finished-at="2019-02-13T17:11:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="VerifyNewReport()[pri:5, instance:com.bossc.qa.testcases.SettingsPageTest@3e6fa38a]" name="VerifyNewReport" duration-ms="30369" started-at="2019-02-11T18:35:34Z" finished-at="2019-02-11T18:36:04Z">
+        <test-method status="PASS" signature="VerifyEditDependent()[pri:11, instance:com.bossc.qa.testcases.EmployeePageTest@77caeb3e]" name="VerifyEditDependent" duration-ms="11073" started-at="2019-02-13T17:11:52Z" finished-at="2019-02-13T17:12:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyNewReport -->
-      </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
+        </test-method> <!-- VerifyEditDependent -->
+      </class> <!-- com.bossc.qa.testcases.EmployeePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

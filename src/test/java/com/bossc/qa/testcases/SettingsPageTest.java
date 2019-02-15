@@ -42,7 +42,7 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-/*
+///*
 		 @Test(priority=18)
 		public void VerifyNewStaticField() throws InterruptedException{
 		
@@ -50,8 +50,8 @@ public class SettingsPageTest extends TestBase{
 			
 			
 		}
-		*/
-	/*
+		//*/
+	///*
 		@Test(priority=19)
 		public void VerifyNewListField() throws InterruptedException{
 		
@@ -59,8 +59,8 @@ public class SettingsPageTest extends TestBase{
 			
 			
 		}
-		*/
-		/*
+	//	*/
+		///*
 		@DataProvider(name="ConstantData")
 		String [][] getData() throws IOException
 		{
@@ -90,8 +90,8 @@ public class SettingsPageTest extends TestBase{
 			
 			
 		}
-		*/
-		/*
+		//*/
+		///*
 		@Test(priority=21)
 		public void VerifyNewCalculationField() throws InterruptedException{
 			
@@ -99,20 +99,31 @@ public class SettingsPageTest extends TestBase{
 			
 			
 		}
-		*/
+		//*/
 		
 		
 		// ar
 		///*
-	@Test(priority=5)
-		public void VerifyNewReport() throws InterruptedException{
+	@Test(priority=22)
+		public void VerifyNewCSVReport() throws InterruptedException{
 		
-		 settings.CreateNewReport();
+		 settings.CreateNewCSVReport();
 			
 			
 	}
+	//*/
+	///*
+	@Test(priority=22)
+	public void VerifyNewDELReport() throws InterruptedException{
+	
+	 settings.CreateNewDELReport();
+		
+		
+}
+
+	
 	//*/	
-/*	
+///*	
 		@Test(priority=22)
 		public void VerifyNewDocument() throws InterruptedException{
 		
@@ -121,9 +132,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-*/
+//*/
 		
-	/*
+	///*
 		@Test(priority=23)
 		public void VerifyEmailService1() throws InterruptedException{
 		
@@ -132,8 +143,8 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
-/*
+	//*/
+///*
 		@Test(priority=24)
 		public void VerifyEmailService2() throws InterruptedException, IOException{
 		
@@ -144,8 +155,8 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-		*/
-/*
+	//	*/
+///*
 		@Test(priority=25)
 		public void VerifyEventCreationEnableAccountF() throws InterruptedException, IOException{
 		
@@ -156,9 +167,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=26,dependsOnMethods={ "VerifyEventCreationEnableAccountF" })
 		public void VerifyEventPerformanceEnableAccountF() throws InterruptedException, IOException{
 		
@@ -169,8 +180,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/	
-		/*
+	//*/	
+	//	/*
 				@Test(priority=27)
 				public void VerifyEventCreationDisableAccountF() throws InterruptedException, IOException{
 				
@@ -181,9 +192,9 @@ public class SettingsPageTest extends TestBase{
 					
 				}
 				
-			*/
+		//	*/
 				
-		/*
+		///*
 				@Test(priority=28,dependsOnMethods={ "VerifyEventCreationDisableAccountF" })
 				public void VerifyEventPerformanceDisableAccountF() throws InterruptedException, IOException{
 				
@@ -194,9 +205,9 @@ public class SettingsPageTest extends TestBase{
 			
 					
 				}
-			*/
+			//*/
 		
-				/*
+			//	/*
 				@Test(priority=29)
 				public void VerifyEventCreationGrantMobileF() throws InterruptedException, IOException{
 				
@@ -207,9 +218,9 @@ public class SettingsPageTest extends TestBase{
 					
 				}
 				
-			*/
+			//*/
 				
-		/*
+	//	/*
 				@Test(priority=30,dependsOnMethods={ "VerifyEventCreationGrantMobileF" })
 				public void VerifyEventPerformanceGrantMobileF() throws InterruptedException, IOException{
 				
@@ -220,8 +231,8 @@ public class SettingsPageTest extends TestBase{
 			
 					
 				}
-			*/
-				/*
+		//	*/
+		//		/*
 				@Test(priority=31)
 				public void VerifyEventCreationRevokeMobileF() throws InterruptedException, IOException{
 				
@@ -232,9 +243,9 @@ public class SettingsPageTest extends TestBase{
 					
 				}
 				
-			*/
+		//	*/
 				
-		/*
+		///*
 				@Test(priority=32,dependsOnMethods={ "VerifyEventCreationRevokeMobileF" })
 				public void VerifyEventPerformanceRevokeMobileF() throws InterruptedException, IOException{
 				
@@ -245,8 +256,8 @@ public class SettingsPageTest extends TestBase{
 			
 					
 				}
-			*/
-				/*
+		//	*/
+			//	/*
 				@Test(priority=33)
 				public void VerifyEventCreationHealthObjectF() throws InterruptedException, IOException{
 				
@@ -257,9 +268,9 @@ public class SettingsPageTest extends TestBase{
 					
 				}
 			
-			*/
+		//	*/
 				
-		/*
+		///*
 				@Test(priority=34,dependsOnMethods={ "VerifyEventCreationHealthObjectF" })
 				public void VerifyEventPerformanceCreateHealthObjectF() throws InterruptedException, IOException{
 				
@@ -270,8 +281,8 @@ public class SettingsPageTest extends TestBase{
 			
 					
 			}
-			*/
-		/*
+		//	*/
+		///*
 		@Test(priority=35)
 		public void VerifyEventTerminateHealthObjectF() throws InterruptedException, IOException{
 		
@@ -282,9 +293,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=36,dependsOnMethods={ "VerifyEventTerminateHealthObjectF" })
 		public void VerifyEventPerformanceTerminateHealthObjectF() throws InterruptedException, IOException{
 		
@@ -295,8 +306,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
-		/*
+//	*/
+		///*
 		@Test(priority=37)
 		public void VerifyEventCreationFieldUpdateF() throws InterruptedException, IOException{
 		
@@ -307,9 +318,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+//	*/
 		
-/*
+///*
 		@Test(priority=38,dependsOnMethods={ "VerifyEventCreationFieldUpdateF" })
 		public void VerifyEventPerformanceFieldUpdateF() throws InterruptedException, IOException{
 		
@@ -320,8 +331,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
-		/*
+	//*/
+		///*
 				@Test(priority=39)
 				public void VerifyEventCreationDependentFieldUpdate() throws InterruptedException, IOException{
 				
@@ -331,13 +342,13 @@ public class SettingsPageTest extends TestBase{
 			
 				}
 				
-			*/
+		//	*/
 		
 		
 		
 		
 				
-		/*
+		///*
 				@Test(priority=40,dependsOnMethods={ "VerifyEventCreationDependentFieldUpdate" })
 				public void VerifyEventPerformanceDependentFieldUpdate() throws InterruptedException, IOException{
 				
@@ -348,8 +359,8 @@ public class SettingsPageTest extends TestBase{
 			
 					
 				}
-			*/
-	/*
+		//	*/
+//	/*
 		@Test(priority=41)
 		public void VerifyEventAssignWorkFlowF() throws InterruptedException, IOException{
 		
@@ -360,9 +371,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+//	*/
 		
-/*
+///*
 		@Test(priority=42,dependsOnMethods={ "VerifyEventAssignWorkFlowF" })
 		public void VerifyEventPerformanceAssignWorkFlowF() throws InterruptedException, IOException{
 		
@@ -373,11 +384,11 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
+	//*/
 		
 		
 		
-		/*
+		///*
 		@Test(priority=43)
 		public void VerifyEventCreationEnableAccountC() throws InterruptedException, IOException{
 		
@@ -388,9 +399,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=44,dependsOnMethods={ "VerifyEventCreationEnableAccountC" })
 		public void VerifyEventPerformanceEnableAccountC() throws InterruptedException, IOException{
 		
@@ -401,8 +412,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/	
-		/*
+	//*/	
+	//	/*
 		@Test(priority=45)
 		public void VerifyEventCreationDisableAccountC() throws InterruptedException, IOException{
 		
@@ -413,9 +424,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=46,dependsOnMethods={ "VerifyEventCreationDisableAccountC" })
 		public void VerifyEventPerformanceDisableAccountC() throws InterruptedException, IOException{
 		
@@ -426,8 +437,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
-		/*
+	//*/
+		///*
 		@Test(priority=47)
 		public void VerifyEventCreationGrantMobileC() throws InterruptedException, IOException{
 		
@@ -438,9 +449,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=48,dependsOnMethods={ "VerifyEventCreationGrantMobileC" })
 		public void VerifyEventPerformanceGrantMobileC() throws InterruptedException, IOException{
 		
@@ -451,9 +462,9 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-*/
+//*/
 		
-		/*
+		///*
 		@Test(priority=49)
 		public void VerifyEventCreationRevokeMobileC() throws InterruptedException, IOException{
 		
@@ -464,9 +475,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=50,dependsOnMethods={ "VerifyEventCreationRevokeMobileC" })
 		public void VerifyEventPerformanceRevokeMobileC() throws InterruptedException, IOException{
 		
@@ -477,8 +488,8 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
-		/*
+	//*/
+		///*
 		@Test(priority=51)
 		public void VerifyEventCreationHealthObjectC() throws InterruptedException, IOException{
 		
@@ -489,9 +500,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=52,dependsOnMethods={ "VerifyEventCreationHealthObjectC" })
 		public void VerifyEventPerformanceCreateHealthObjectC() throws InterruptedException, IOException{
 		
@@ -503,7 +514,7 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 
-		/*
+	//	/*
 		@Test(priority=55)
 		public void VerifyEventCreationFieldUpdateC() throws InterruptedException, IOException{
 		
@@ -514,9 +525,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=56,dependsOnMethods={ "VerifyEventCreationFieldUpdateC" })
 		public void VerifyEventPerformanceFieldUpdateC() throws InterruptedException, IOException{
 		
@@ -527,9 +538,9 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
+	//*/
 		
-		/*
+	//	/*
 		@Test(priority=57)
 		public void VerifyEventAssignWorkFlowC() throws InterruptedException, IOException{
 		
@@ -540,9 +551,9 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 		
-	*/
+	//*/
 		
-/*
+///*
 		@Test(priority=58,dependsOnMethods={ "VerifyEventAssignWorkFlowC" })
 		public void VerifyEventPerformanceAssignWorkFlowC() throws InterruptedException, IOException{
 		
@@ -553,7 +564,7 @@ public class SettingsPageTest extends TestBase{
 	
 			
 		}
-	*/
+	//*/
 		
 	
 		
@@ -564,7 +575,7 @@ public class SettingsPageTest extends TestBase{
 		
 		
 		
-	/*
+	///*
 	 @Test(priority=59)
 	 
 		public void VerifyNewObjectCalculationFields() throws InterruptedException{
@@ -574,7 +585,7 @@ public class SettingsPageTest extends TestBase{
 			
 		}
 	 
-		*/
+	//	*/
 	
 	  /* 
 	 @AfterMethod

@@ -192,8 +192,11 @@ public class Settings extends TestBase{
 	WebElement ReportTypeSelect;
 
 	@FindBy(xpath="//span[text()=' Comma Separated Values (CSV)']")
-	WebElement ReportTypeOption;
+	WebElement ReportTypeCSVOption;
 
+	@FindBy(xpath="//span[text()=' Field Delimited (DEL)']")
+	WebElement ReportTypeDELOption;
+	
 	@FindBy(xpath="//input[@id='mat-input-2']")
 	WebElement ReportName;
 	
@@ -245,6 +248,37 @@ public class Settings extends TestBase{
 	
 	@FindBy(xpath="//span[text()='ConstantTest08 (ConstantTest08)']")
 	WebElement Add_ConstantTest08_Option;
+	
+	@FindBy(xpath="(//input[@placeholder='start'])[1]")
+	WebElement FirstStart;
+	
+	@FindBy(xpath="(//input[@placeholder='start'])[2]")
+	WebElement SecondStart;
+	
+	@FindBy(xpath="(//input[@placeholder='start'])[3]")
+	WebElement ThirdStart;
+	
+	@FindBy(xpath="(//input[@placeholder='start'])[4]")
+	WebElement FourthStart;
+	
+	@FindBy(xpath="(//input[@placeholder='start'])[5]")
+	WebElement FifthStart;
+	
+	@FindBy(xpath="(//input[@placeholder='end'])[1]")
+	WebElement FirstEnd;
+	
+	@FindBy(xpath="(//input[@placeholder='end'])[2]")
+	WebElement SecondEnd;
+	
+	@FindBy(xpath="(//input[@placeholder='end'])[3]")
+	WebElement ThirdEnd;
+	
+	@FindBy(xpath="(//input[@placeholder='end'])[4]")
+	WebElement FourthEnd;
+	
+	@FindBy(xpath="(//input[@placeholder='end'])[5]")
+	WebElement FifthEnd;
+	
 	
 	@FindBy(xpath="//button[@mattooltip='Save Report']")
 	WebElement Save_After_Add_Field;
@@ -725,7 +759,7 @@ public void CreateNewStaticField() throws InterruptedException{
 		Add.click();
 		FieldName.sendKeys("StaticTest08");
 		FieldDisplayName.sendKeys("StaticTest08");
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		FieldTypeSelect.click();
 		Thread.sleep(2000);
 		FieldTypeStatic.click();
@@ -837,15 +871,15 @@ public void CreateNewCalculationField() throws InterruptedException{
 
 
 
-public void CreateNewReport() throws InterruptedException{
+public void CreateNewCSVReport() throws InterruptedException{
 	
 	Report.click();
 	CreateReport.click();
 	Thread.sleep(2000);
 	ReportTypeSelect.click();
 	Thread.sleep(2000);
-	ReportTypeOption.click();
-	ReportName.sendKeys("eee");
+	ReportTypeCSVOption.click();
+	ReportName.sendKeys("fff");
 	Thread.sleep(1000);
 	//ReportServiceSelect.click();
 	//Thread.sleep(1000);
@@ -880,7 +914,7 @@ public void CreateNewReport() throws InterruptedException{
 	Save_After_Add_Field.click();
 	Thread.sleep(4000);
 	Back.click();
-	QuickSearchEnter.sendKeys("eee");
+	QuickSearchEnter.sendKeys("fff");
 	Thread.sleep(5000);
 	QuickSearchClick.click();
 	ResultSearchClick.click();
@@ -892,6 +926,75 @@ public void CreateNewReport() throws InterruptedException{
 	
 		
 }
+
+
+public void CreateNewDELReport() throws InterruptedException{
+	
+	Report.click();
+	CreateReport.click();
+	Thread.sleep(2000);
+	ReportTypeSelect.click();
+	Thread.sleep(2000);
+	ReportTypeDELOption.click();
+	ReportName.sendKeys("AutomatedDELRe");
+	Thread.sleep(1000);
+	//ReportServiceSelect.click();
+	//Thread.sleep(1000);
+	//ReportServiceOption.click();
+	//Thread.sleep(2000);
+	ReportCategorySelect.click();
+	Thread.sleep(1000);
+	ReportCategoryOption.click();
+
+	ReportDescription.sendKeys("Testing Purpose");
+	Thread.sleep(1000);
+	ReportSave.click();
+	Thread.sleep(2000);
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_First_Name_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_Last_Name_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add__DateOfBirth_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_Age_To_Report_Option.click();
+	Add_Fields_TO_Report_Select.click();
+	Thread.sleep(1000);
+	Add_ConstantTest08_Option.click();
+	Thread.sleep(1000);
+	FirstStart.sendKeys("0");
+	SecondStart.sendKeys("2");
+	ThirdStart.sendKeys("4");
+	FourthStart.sendKeys("6");
+	FifthStart.sendKeys("8");
+	FirstEnd.sendKeys("1");
+	SecondEnd.sendKeys("3");
+	ThirdEnd.sendKeys("5");
+	FourthEnd.sendKeys("7");
+	FifthEnd.sendKeys("9");
+	
+	
+	
+	Save_After_Add_Field.click();
+	Thread.sleep(4000);
+	Back.click();
+	QuickSearchEnter.sendKeys("AutomatedDELRe");
+	Thread.sleep(5000);
+	QuickSearchClick.click();
+	ResultSearchClick.click();
+	
+	
+	
+	
+	
+	
+		
+}
+
 
 
 
@@ -1930,7 +2033,7 @@ public String GrantMobile2C() throws InterruptedException{
 public String RevokeMobile2C() throws InterruptedException{
 	
 	EmployeesSection1.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	AddEmployee.click();
 	EmployeeFirstName.sendKeys("RevokeMobile");
 	Thread.sleep(1000);

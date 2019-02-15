@@ -18,6 +18,7 @@ import com.bossc.qa.util.TestUtil;
 
 public class Employees extends TestBase{
 	// Add new Employee
+	Actions action = new Actions(driver);
 	
 	@FindBy(xpath="//li[text()='EMPLOYEES']")
 	WebElement EmployeeSection;
@@ -161,8 +162,10 @@ public class Employees extends TestBase{
 	WebElement ClickAssignTask_WorkFlow;
 	
 	@FindBy(xpath="//mat-cell[text()=' Sick Days ']")
-	WebElement VerifyAssignTask_WorkFlow;
+	WebElement VerifyAssignWorkFlow;
 	
+	@FindBy(xpath="//mat-cell[text()=' Upload Your Photo ID ']")
+	WebElement VerifyAssignTask;
 	
 	
 	
@@ -231,7 +234,7 @@ public class Employees extends TestBase{
 	
 	// Workflow Edit
 	
-	@FindBy(xpath="//a[text()='VIEW PROFILE']")
+	@FindBy(xpath="(//a[text()='VIEW PROFILE'])[1]")
 	WebElement DependentProfile;
 	
 	@FindBy(xpath="//button[@title='Edit Profile']")
@@ -285,13 +288,13 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Documents']")
 	WebElement Employee_Documents;
 	
-	@FindBy(xpath="//button[@title='GENERATE Documents']")
-	WebElement Employee_GenerateDocument;
+	@FindBy(xpath="//mat-select[@ng-reflect-placeholder='Generate Document']")
+	WebElement Employee_GenerateDocument_Select;
 	
-	@FindBy(xpath="//div[text()='AutomatedDocument']")
-	WebElement Employee_DocumentSelect;
+	@FindBy(xpath="//span[text()=' TestEmailService ']")
+	WebElement Employee_Document_Option;
 	
-	@FindBy(xpath="//button[text()='Create Documents']")
+	@FindBy(xpath="//button[text()='YES']")
 	WebElement Employee_GenerateDocumentsFinal;
 	
 	@FindBy(xpath="//h5[text()='Success']")
@@ -529,7 +532,7 @@ public void AssignWorkFlow() throws InterruptedException{
     WorkFlowAssignMakeSure.click();
 	ClickAssignTask_WorkFlow.click();
 	Thread.sleep(2000);
-	VerifyAssignTask_WorkFlow.click();
+	VerifyAssignWorkFlow.click();
 	
 	
 	
@@ -589,7 +592,7 @@ public void AssignTask() throws InterruptedException{
 	TaskAssignMakeSure.click();
 	ClickAssignTask_WorkFlow.click();
 	Thread.sleep(2000);
-	VerifyAssignTask_WorkFlow.click();
+	VerifyAssignTask.click();
 	
 	
 	}
@@ -725,10 +728,12 @@ public boolean Generate_Document() throws InterruptedException{
 	EmployeeSearchClick.click();
 	Thread.sleep(2000);
 	Employee_Documents.click();
-	Employee_GenerateDocument.click();
-	Employee_DocumentSelect.click();
+	Thread.sleep(2000);
+	Employee_GenerateDocument_Select.click();
+	Employee_Document_Option.click();
+	Thread.sleep(2000);
 	Employee_GenerateDocumentsFinal.click();
-	Thread.sleep(5000);
+	Thread.sleep(7000);
 	return Employee_GenerateDocumentsMakeSure.isDisplayed();
 
 
@@ -797,10 +802,10 @@ public String Edit_Column()throws InterruptedException{
 
 	Thread.sleep(2000);
 	EditColumn.click();
-	EditColumnSearch.sendKeys("Hired Date");
+	EditColumnSearch.sendKeys("Hired");
 	Actions action = new Actions(driver);
 	action.clickAndHold(driver.findElement(By.xpath("//span[text()='Hired Date']"))).moveToElement(driver.findElement(By.xpath("//div[@class='columns-container']"))).release().build().perform();
-	EditColumnSave.click();
+	//EditColumnSave.click();
 	return EmployeeHiredDateDirectory.getText();
 	
 	
