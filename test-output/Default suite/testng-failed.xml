@@ -5,8 +5,41 @@
     <classes>
       <class name="com.bossc.qa.testcases.SettingsPageTest">
         <methods>
-          <include name="VerifyDeleteDependedField"/>
+          <include name="VerifyEventPerformanceCreateHealthObjectF"/>
+          <include name="VerifyEventCreationRevokeMobileC"/>
+          <include name="VerifyEventPerformanceRevokeMobileC"/>
+          <include name="VerifyEventCreationRevokeMobileF"/>
+          <include name="VerifyEventPerformanceRevokeMobileF"/>
+          <include name="VerifyEmailService1"/>
+          <include name="VerifyEventCreationDisableAccountF"/>
+          <include name="VerifyEventPerformanceDisableAccountC"/>
+          <include name="VerifyEventCreationHealthObjectF"/>
+          <include name="VerifyEventPerformanceGrantMobileC"/>
+          <include name="VerifyEventCreationHealthObjectC"/>
+          <include name="VerifyEventPerformanceGrantMobileF"/>
           <include name="setUp"/>
+          <include name="VerifyEventPerformanceAssignWorkFlowF"/>
+          <include name="VerifyEventPerformanceDisableAccountF"/>
+          <include name="VerifyEventPerformanceTerminateHealthObjectF"/>
+          <include name="VerifyEventPerformanceEnableAccountF"/>
+          <include name="VerifyEventPerformanceEnableAccountC"/>
+          <include name="VerifyNewObjectCalculationFields"/>
+          <include name="VerifyEventCreationGrantMobileF"/>
+          <include name="VerifyEventTerminateHealthObjectF"/>
+          <include name="VerifyEventCreationFieldUpdateF"/>
+          <include name="VerifyEventPerformanceFieldUpdateF"/>
+          <include name="VerifyEventCreationFieldUpdateC"/>
+          <include name="VerifyEventAssignWorkFlowF"/>
+          <include name="VerifyEventAssignWorkFlowC"/>
+          <include name="VerifyEventCreationEnableAccountC"/>
+          <include name="VerifyEventCreationEnableAccountF"/>
+          <include name="VerifyEventCreationGrantMobileC"/>
+          <include name="VerifyEventCreationDisableAccountC"/>
+          <include name="VerifyEventPerformanceDependentFieldUpdate"/>
+          <include name="VerifyEventPerformanceCreateHealthObjectC"/>
+          <include name="VerifyEmailService2"/>
+          <include name="VerifyEventCreationDependentFieldUpdate"/>
+          <include name="VerifyEventPerformanceFieldUpdateC"/>
         </methods>
       </class> <!-- com.bossc.qa.testcases.SettingsPageTest -->
     </classes>

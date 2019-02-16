@@ -246,7 +246,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="//button[@title='Save Profile']")
 	WebElement DependentEditSave;
 	
-	@FindBy(xpath="//input[@id='mat-input-6']")
+	@FindBy(xpath="//input[@id='mat-input-4']")
 	WebElement DependentEditedValue;
 	
 	@FindBy(xpath="(//div[text()=' Personal Details '])[2]")
@@ -397,7 +397,7 @@ public class Employees extends TestBase{
 	@FindBy(xpath="(//mat-expansion-panel-header[@role='button'])[2]")
 	WebElement AuditEntries;
 	
-	@FindBy(xpath="//div[text()='Last Name']")
+	@FindBy(xpath="//div[text()='First Name']")
 	WebElement AuditEntriesMakeSure;
 	
 	@FindBy(xpath="//input[@ng-reflect-placeholder='Username']")
